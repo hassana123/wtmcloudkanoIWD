@@ -49,7 +49,7 @@ function Home() {
         {/* Main Content */}
         <div className="relative sm:mt-[] md:mt-[200px] mt-[80px]   text-white">
           <div className="flex md:flex-row flex-col-reverse md:w-[90%] mx-auto  justify-between">
-            <div className="md:w-[70%] rp mt-20 md:mt-0">
+            <div className="md:w-[70%] rp mt-5 md:mt-0">
               <motion.h1
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -120,7 +120,7 @@ function Home() {
         </div>
 
         {/* Countdown Section with Enhanced Decorative Lines */}
-        <div className="absolute bottom-[0%] md:right-[20%] right-[50%] transform translate-x-1/2">
+        <div className=" absolute bottom-[0%] md:right-[25%] right-[50%] transform translate-x-1/2">
           {/* Decorative Lines */}
           <div className="relative hidden md:block ">
             {/* Main Vertical Line */}

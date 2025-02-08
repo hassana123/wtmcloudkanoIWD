@@ -51,6 +51,11 @@
 .animate-float {
   animation: float 6s ease-in-out infinite;
 }
+@media (max-width: 450px) {
+  .rp{
+    margin-top: 150px;
+  }
+}
 
 @keyframes float {
   0% {

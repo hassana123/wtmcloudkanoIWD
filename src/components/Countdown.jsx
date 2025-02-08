@@ -36,7 +36,7 @@ function Countdown({ targetDate }) {
   ];
 
   return (
-    <div className="flex justify-center space-x-4">
+    <div className="flex z-100 justify-center space-x-4">
       {timeBlocks.map((block, index) => (
         <motion.div
           key={block.label}
@@ -48,7 +48,7 @@ function Countdown({ targetDate }) {
           <motion.div
             animate={{ scale: [1, 1.1, 1] }}
             transition={{ duration: 1, repeat: Infinity }}
-            className="md:w-20 md:h-20 bg-white/90 rounded-lg shadow-lg flex items-center justify-center mb-2 md:p-0 p-4"
+            className="md:w-20 z-100 md:h-20 bg-white/90 rounded-lg shadow-lg flex items-center justify-center mb-2 md:p-0 p-4"
           >
             <span className="text-3xl font-bold text-primary-dark">
               {String(block.value).padStart(2, '0')}

@@ -33,7 +33,7 @@ function Home() {
   return (
     <div className="relative">
       {/* Hero Section */}
-      <section className="relative h-screen  px-3 lg:px-16 overflow-hidden">
+      <section className="relative h-screen  lg:px-16 overflow-hidden">
         {/* Background with overlay */}
         <div
           className="absolute inset-0  bg-cover bg-center"
@@ -47,28 +47,28 @@ function Home() {
         </div>
 
         {/* Main Content */}
-        <div className="relative sm:mt-[] md:mt-[200px] mt-[80px]   text-white">
-          <div className="flex md:flex-row flex-col-reverse md:w-[90%] mx-auto  justify-between">
-            <div className="md:w-[70%] rp mt-5 md:mt-0">
+        <div className="relative  md:mt-[150px] mt-[130px]   text-white">
+          <div className="flex md:flex-row flex-col md:bg-transparent bg-navy/30 md:w-[95%] w-[98%] mx-auto  justify-between md:backdrop-blur-none backdrop-blur-md py-10 rounded-2xl md:border-none border border-white/10 px-1">
+            <div className="md:w-[70%] ">
               <motion.h1
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
-                className="text-5xl lg:text-7xl font-bold mb-3 md:mb-6"
+                className="text-5xl lg:text-7xl font-bold mb-6"
               >
                 Redefine
-                <span className="text-primary-dark block">Possible</span>
+                <span className="text-primary-dark block md:mt-0 mt-3 md:ml-0 ml-[45%]">Possible</span>
               </motion.h1>
 
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                className="text-xl lg:text-2xl md:mb-8 mb-2 text-navy "
+                className="text-xl lg:text-2xl mb-8  text-whit "
               >
                 International Women's Day 2025
               </motion.p>
-              <div className="flex flex-col sm:flex-row gap-2 md:gap-4">
+              <div className="flex flex-col sm:flex-row gap-4">
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -91,25 +91,25 @@ function Home() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
-                className="space-y-3 text-lg md:mt-0 mt-3 font-medium bg-white/5 backdrop-blur-md p-5 rounded-2xl border border-white/10"
+                className="space-y-3 text-lg md:mt-0 mt-3 font-medium md:bg-white/5 bg-white  md:backdrop-blur-md p-5 rounded-2xl border border-white/10"
               >
                 <motion.div
                   whileHover={{ scale: 1.05 }}
-                  className="flex items-center gap-3 text-white"
+                  className="flex items-center gap-3 md:text-white text-dark"
                 >
                   <MapPin className="w-6 h-6 text-accent-gold" />
                   <span>Landmark Event Center</span>
                 </motion.div>
                 <motion.div
                   whileHover={{ scale: 1.05 }}
-                  className="flex items-center gap-3 text-white"
+                  className="flex items-center gap-3 md:text-white text-dark"
                 >
                   <Calendar className="w-6 h-6 text-primary" />
                   <span>8th March 2025</span>
                 </motion.div>
                 <motion.div
                   whileHover={{ scale: 1.05 }}
-                  className="flex items-center gap-3 text-white"
+                  className="flex items-center gap-3 md:text-white text-dark"
                 >
                   <Users className="w-6 h-6 text-secondary" />
                   <span>Open to Everyone</span>
@@ -120,7 +120,7 @@ function Home() {
         </div>
 
         {/* Countdown Section with Enhanced Decorative Lines */}
-        <div className=" absolute bottom-[0%] md:right-[25%] right-[50%] transform translate-x-1/2">
+        <div className="hidden md:block absolute bottom-[0%] md:right-[25%] right-[50%] transform translate-x-1/2">
           {/* Decorative Lines */}
           <div className="relative hidden md:block ">
             {/* Main Vertical Line */}
@@ -148,7 +148,7 @@ function Home() {
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.5 }}
-            className="relative mt-32 bg-white/10 backdrop-blur-md rounded-2xl md:p-6 p-3 border border-white/20 shadow-2xl"
+            className="relative md:mt-[95px] lg:mt-32 bg-white/10 backdrop-blur-md rounded-2xl md:p-6 p-3 border border-white/20 shadow-2xl"
           >
             <Countdown targetDate="2025-03-08" />
           </motion.div>
@@ -163,7 +163,16 @@ function Home() {
           <ChevronDown size={32} />
         </motion.div>
       </section>
-
+    <div className="bg-primary md:hidden block ">
+    <motion.div
+            initial={{ y: 20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+            className="relative bg-white/10 backdrop-blur-md rounded-2xl md:p-6 p-3 border border-white/20 shadow-2xl"
+          >
+            <Countdown targetDate="2025-03-08" />
+          </motion.div>
+    </div>
       {/* Statistics Section */}
       <motion.section
         initial={{ opacity: 0, y: 50 }}

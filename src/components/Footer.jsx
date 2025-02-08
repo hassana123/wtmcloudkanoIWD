@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom';
 import { FaTwitter, FaLinkedin, FaInstagram } from 'react-icons/fa';
+import logo from "../assets/wtm.png";
+import g3w from "../assets/g3w.png";
 
 function Footer() {
   return (
@@ -7,11 +9,18 @@ function Footer() {
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="col-span-1 md:col-span-2">
-            <img
-              src="/logo.svg"
+           <div className='flex space-x-3'>
+           <img
+              src={logo}
               alt="WTM Cloud Kano"
               className="h-8 w-auto mb-4"
             />
+             <img
+              src={g3w}
+              alt="Giggles Glow And Grow"
+              className="h-8 w-auto mb-4"
+            />
+           </div>
             <p className="text-gray-300 mb-4">
               Empowering women in technology to redefine what's possible.
             </p>

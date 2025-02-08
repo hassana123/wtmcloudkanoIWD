@@ -4,14 +4,14 @@ function Sponsors() {
   const sponsors = [
     {
       name: "Google",
-      logo: "https://example.com/google-logo.png",
+      logo: "https://developers.google.com/community/gdg/images/logo-lockup-gdg-horizontal_720.png",
       tier: "platinum"
     },
     // Add more sponsor logos
   ];
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-gradient-to-br from-primary-light via-white to-secondary-light">
       <div className="container mx-auto px-4">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -29,12 +29,12 @@ function Sponsors() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
               whileHover={{ scale: 1.05 }}
-              className="flex items-center justify-center p-8 bg-gray-50 rounded-xl"
+              className=""
             >
               <img
                 src={sponsor.logo}
                 alt={sponsor.name}
-                className="max-h-12 w-auto"
+                className="w-full"
               />
             </motion.div>
           ))}

@@ -1,21 +1,21 @@
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
-
+import { photos } from '../data/Spotlight';
 function PastHighlights() {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  const highlights = [
-    {
-      image: "https://example.com/past-event-1.jpg",
-      title: "IWD 2024",
-      description: "A memorable celebration of women in technology"
-    },
-    // Add more past event images
-  ];
+  // const highlights = [
+  //   {
+  //     image: "https://example.com/past-event-1.jpg",
+  //     title: "IWD 2024",
+  //     description: "A memorable celebration of women in technology"
+  //   },
+  //   // Add more past event images
+  // ];
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % highlights.length);
+      setCurrentSlide((prev) => (prev + 1) % photos.length);
     }, 5000);
 
     return () => clearInterval(timer);
@@ -38,7 +38,7 @@ function PastHighlights() {
             transition={{ type: "spring", stiffness: 300, damping: 30 }}
             className="flex"
           >
-            {highlights.map((highlight, index) => (
+            {photos.map((highlight, index) => (
               <motion.div
                 key={index}
                 className="min-w-full"
@@ -46,20 +46,19 @@ function PastHighlights() {
                 whileInView={{ opacity: 1 }}
               >
                 <img
-                  src={highlight.image}
-                  alt={highlight.title}
+                  src={highlight.url}
+                  alt={highlight.caption}
                   className="w-full h-[600px] object-cover rounded-xl"
                 />
-                <div className="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black/80 to-transparent">
-                  <h3 className="text-2xl font-bold mb-2">{highlight.title}</h3>
-                  <p>{highlight.description}</p>
+                <div className="absolute bottom-7 md:bottom-0 w-full mx-5">
+                  <h3 className="text-2xl font-bold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-accent-gold">{highlight.caption}</h3>
                 </div>
               </motion.div>
             ))}
           </motion.div>
 
           <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
-            {highlights.map((_, index) => (
+            {photos.map((_, index) => (
               <button
                 key={index}
                 onClick={() => setCurrentSlide(index)}

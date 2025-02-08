@@ -33,8 +33,8 @@ function Navbar() {
         isScrolled ? 'bg-white shadow-lg' : 'bg-transparent'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+      <div className=" mx-auto px-4  lg:px-8">
+        <div className="flex justify-between items-center h-12">
           {/* Logo Section */}
           <div className="flex items-center space-x-2">
             <Link to="/" className="flex items-center space-x-2">
@@ -45,12 +45,12 @@ function Navbar() {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex md:items-center md:space-x-8">
+          <div className="hidden md:flex md:items-center space-x-3 lg:space-x-8">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
                 to={link.path}
-                className={`text-md font-semibold transition-colors duration-300 ${
+                className={`lg:text-md md:text-sm font-semibold transition-colors duration-300 ${
                   location.pathname === link.path
                     ? 'text-primary-dark border-b-2 border-primary-dark'
                     : 'text-accent hover:text-primary-dark hover:border-b-2 border-transparent'
@@ -61,7 +61,7 @@ function Navbar() {
             ))}
           </div>
 
-          <button className="md:block hidden btn-primary px-6 py-2 rounded-lg text-lg font-semibold shadow-md hover:shadow-lg transition">Register Now</button>
+          <button className="md:block hidden btn-primary md:px-3 lg:px-6 py-2 rounded-lg lg:text-lg md:text-sm font-semibold shadow-md hover:shadow-lg transition">Register Now</button>
 
           {/* Mobile menu button */}
           <div className={`md:hidden flex items-center1 `}>

@@ -47,9 +47,9 @@ function Home() {
         </div>
 
         {/* Main Content */}
-        <div className="relative md:mt-[200px] mt-[80px]   text-white">
+        <div className="relative sm:mt-[] md:mt-[200px] mt-[80px]   text-white">
           <div className="flex md:flex-row flex-col-reverse md:w-[90%] mx-auto  justify-between">
-            <div className="md:w-[70%] mt-20 md:mt-0  ">
+            <div className="md:w-[70%] rp mt-20 md:mt-0">
               <motion.h1
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}

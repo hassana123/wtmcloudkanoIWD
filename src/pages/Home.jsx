@@ -163,7 +163,7 @@ function Home() {
           <ChevronDown size={32} />
         </motion.div>
       </section>
-    <div className="bg-primary md:hidden block ">
+    <div className="bg-gradient-to-br from-primary-light via-navy to-secondary-dark md:hidden block ">
     <motion.div
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}

@@ -72,7 +72,7 @@ function Navbar() {
               <span className="sr-only">Open main menu</span>
               {/* Hamburger icon */}
               <svg
-                className={`${isMobileMenuOpen ? 'hidden' : 'block'} h-8 w-8 ${isScrolled?"":"text-white" }`}
+                className={`${isMobileMenuOpen ? 'hidden' : 'block'} h-8 w-8 ${isScrolled?"":"text-dark" }`}
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"

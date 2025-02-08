@@ -179,7 +179,7 @@ function Home() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
-        className="py-20 bg-gradient-to-b from-black to-blue-950 text-white"
+        className="py-10 bg-gradient-to-b from-black to-blue-950 text-white"
       >
         <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
           <motion.div

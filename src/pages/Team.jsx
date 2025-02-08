@@ -40,7 +40,7 @@ function Team() {
       : team.filter((member) => member.tags.includes(selectedFilter));
 
   return (
-    <div className="min-h-screen pt-20 bg-gradient-to-br from-primary-light via-navy to-secondary-dark text-white">
+    <div className="min-h-screen pt-10 bg-gradient-to-br from-primary-light via-navy to-secondary-dark text-white">
       <motion.section
         ref={ref}
         initial="hidden"
@@ -51,7 +51,7 @@ function Team() {
         <h1 className="text-center text-4xl md:text-5xl font-bold mb-4">
           Meet Our Team
         </h1>
-        <p className="text-center text-lg text-gray-300">
+        <p className="text-center text-lg text-dark">
           The dedicated individuals working behind the scenes to make this event possible.
         </p>
 

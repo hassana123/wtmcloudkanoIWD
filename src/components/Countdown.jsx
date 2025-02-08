@@ -48,7 +48,7 @@ function Countdown({ targetDate }) {
           <motion.div
             animate={{ scale: [1, 1.1, 1] }}
             transition={{ duration: 1, repeat: Infinity }}
-            className="w-20 h-20 bg-white/90 rounded-lg shadow-lg flex items-center justify-center mb-2"
+            className="md:w-20 md:h-20 bg-white/90 rounded-lg shadow-lg flex items-center justify-center mb-2 md:p-0 p-4"
           >
             <span className="text-3xl font-bold text-primary-dark">
               {String(block.value).padStart(2, '0')}

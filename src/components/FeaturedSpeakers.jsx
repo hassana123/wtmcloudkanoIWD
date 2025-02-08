@@ -26,7 +26,7 @@ const speakers = [
 
 function FeaturedSpeakers() {
   return (
-    <section className="py-16 bg-gradient-to-r from-primary to-secondary text-white">
+    <section className="py-16 bg-gradient-to-r from-primary/50 to-secondary-dark text-white">
       <div className="container mx-auto px-6">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}

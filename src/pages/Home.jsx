@@ -181,7 +181,7 @@ function Home() {
         transition={{ duration: 0.8 }}
         className="py-10 bg-gradient-to-b from-black to-blue-950 text-white"
       >
-        <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="container mx-auto md:text-left text-center px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
           <motion.div
             whileHover={{ scale: 1.05 }}
             className="p-8 rounded-2xl bg-white/5 backdrop-blur-lg border border-white/10 hover:border-blue-500/50 transition-all"
@@ -201,7 +201,7 @@ function Home() {
             <h3 className="text-2xl font-bold mb-2">Speakers</h3>
             <CountUp
               end={20}
-              duration={4}
+              duration={5}
               className="text-4xl font-bold text-blue-400"
             />
             <span className="text-4xl font-bold text-blue-400">+</span>
@@ -213,7 +213,7 @@ function Home() {
             <h3 className="text-2xl font-bold mb-2">Interactive Sessions</h3>
             <CountUp
               end={10}
-              duration={4}
+              duration={5}
               className="text-4xl font-bold text-blue-400"
             />
             <span className="text-4xl font-bold text-blue-400">+</span>

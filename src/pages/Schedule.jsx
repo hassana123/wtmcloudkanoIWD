@@ -33,7 +33,7 @@ function Schedule() {
     : scheduleItems.filter(item => item.track === activeTrack);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-primary-light via-white to-secondary-light pt-20 bg-gradient-to-br from-primary-light via-white to-secondary-light">
+    <div className="min-h-screen bg-gradient-to-br from-primary-light via-white to-secondary-light pt-10 bg-gradient-to-br from-primary-light via-white to-secondary-light">
       <motion.section
         ref={ref}
         initial={{ opacity: 0 }}

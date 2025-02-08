@@ -25,7 +25,7 @@ function Speakers() {
   const [flippedCard, setFlippedCard] = useState(null);
 
   return (
-    <div className="min-h-screen  pt-20 pb-10  bg-gradient-to-br from-primary-light via-white to-secondary-light">
+    <div className="min-h-screen  pt-10 pb-10 bg-gradient-to-br from-primary-light via-white to-secondary-light">
       <div className="container mx-auto px-4 py-16">
         <h1 className="text-5xl font-bold text-center mb-4">Meet Our Speakers</h1>
         <p className="text-xl text-gray-600 text-center mb-12 max-w-2xl mx-auto">

@@ -8,7 +8,7 @@ function About() {
   });
 
   return (
-    <div className="min-h-screen pt-20 bg-gradient-to-br from-primary-light via-white to-secondary-light">
+    <div className="min-h-screen pt-10 bg-gradient-to-br from-primary-light via-white to-secondary-light">
       <motion.section
         ref={ref}
         initial={{ opacity: 0, y: 20 }}

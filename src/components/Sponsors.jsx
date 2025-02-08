@@ -25,7 +25,7 @@ function Sponsors() {
   ];
 
   return (
-    <section className="py-16 bg-gradient-to-br from-primary-light via-navy to-secondary-dark">
+    <section className="py-10 bg-gradient-to-br from-primary via-navy to-secondary-dark">
       <div className="container mx-auto px-6">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}

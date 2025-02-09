@@ -22,7 +22,7 @@ function PastHighlights() {
   }, []);
 
   return (
-    <section className="py-10 bg-navy text-white">
+    <section className="py-10 bg-gradient-to-br from-primary-light via-white to-secondary-light text-navy">
       <div className="container mx-auto px-4">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}

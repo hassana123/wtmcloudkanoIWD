@@ -25,18 +25,18 @@ function Sponsors() {
   ];
 
   return (
-    <section className="py-10 bg-gradient-to-br from-primary via-navy to-secondary-dark">
+    <section className="py-10 bg-gradient-to-br from-primary-light via-white to-secondary-light">
       <div className="container mx-auto px-6">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-4xl font-bold text-center text-white mb-8"
+          className="text-4xl font-bold text-center text-dark mb-8"
         >
           Our Partners & Sponsors
         </motion.h2>
 
-        <p className="text-center text-gray-300 max-w-2xl mx-auto mb-12">
+        <p className="text-center text-dark max-w-2xl mx-auto mb-12">
           A special thanks to our sponsors who make this event possible.
         </p>
 
@@ -49,7 +49,7 @@ function Sponsors() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1, duration: 0.5 }}
               whileHover={{ scale: 1.08 }}
-              className="flex items-center justify-center bg-white/10 backdrop-blur-lg rounded-xl p-4 shadow-md border border-gray-500/20 hover:shadow-lg hover:border-primary-dark transition-all"
+              className="flex items-center justify-center bg-white/70 backdrop-blur-lg rounded-xl p-4 shadow-md border border-dark/20 hover:shadow-lg hover:border-primary-dark transition-all"
             >
               <img
                 src={sponsor.logo}

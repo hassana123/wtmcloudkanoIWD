@@ -40,7 +40,7 @@ function Team() {
       : team.filter((member) => member.tags.includes(selectedFilter));
 
   return (
-    <div className="min-h-screen pt-10 bg-gradient-to-br from-primary-light via-navy to-secondary-dark text-white">
+    <div className="min-h-screen pt-10 bg-gradient-to-br from-primary-light via-white to-secondary-light">
       <motion.section
         ref={ref}
         initial="hidden"
@@ -63,7 +63,7 @@ function Team() {
               className={`px-5 py-2 rounded-full text-sm font-semibold border ${
                 selectedFilter === filter.value
                   ? "bg-primary-dark text-white border-transparent"
-                  : "bg-transparent border-white text-gray-300 hover:bg-primary hover:text-white"
+                  : "bg-transparent border-white text-dark hover:bg-primary hover:text-white"
               } transition-all`}
               onClick={() => setSelectedFilter(filter.value)}
             >
@@ -78,7 +78,7 @@ function Team() {
             <motion.div
               key={index}
               variants={itemVariants}
-              className="bg-white/10 backdrop-blur-md rounded-2xl shadow-lg border border-white/20 overflow-hidden text-center hover:scale-105 transition-transform duration-300"
+              className="bg-navy/70 backdrop-blur-md rounded-2xl shadow-lg border border-white/20 overflow-hidden text-center hover:scale-105 transition-transform duration-300"
             >
               <img
                 src={member.image}
@@ -88,7 +88,7 @@ function Team() {
               <div className="p-6">
                 <h3 className="text-xl font-bold text-white mb-2">{member.name}</h3>
                 <p className="text-accent-gold font-medium">{member.role}</p>
-                <p className="text-gray-300 italic mt-3">{member.quote}</p>
+                <p className="text-gray-100 italic mt-3">{member.quote}</p>
                 
                 {/* Social Media Icons */}
                 <div className="mt-4 flex justify-center space-x-4">

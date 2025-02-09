@@ -68,3 +68,19 @@
     transform: translateY(0px);
   }
 }
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 20s linear infinite;
+}
+
+.marquee-container:hover .animate-scroll {
+  animation-play-state: paused;
+}

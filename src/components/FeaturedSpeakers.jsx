@@ -26,7 +26,7 @@ const speakers = [
 
 function FeaturedSpeakers() {
   return (
-    <section className="py-16 bg-gradient-to-r from-primary/50 to-secondary-dark text-white">
+    <section className="py-10 bg-gradient-to-br from-primary-light via-white to-secondary-light">
       <div className="container mx-auto px-6">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -50,7 +50,7 @@ function FeaturedSpeakers() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1, duration: 0.5 }}
               whileHover={{ scale: 1.05 }}
-              className="bg-white/10 backdrop-blur-lg rounded-2xl shadow-lg border border-white/20 overflow-hidden hover:shadow-lg hover:border-primary-dark transition-all"
+              className="bg-navy backdrop-blur-lg rounded-2xl shadow-lg border border-white/20 overflow-hidden hover:shadow-lg hover:border-primary-dark transition-all"
             >
               <img
                 src={speaker.image}
@@ -62,7 +62,7 @@ function FeaturedSpeakers() {
                   {speaker.name}
                 </h3>
                 <p className="text-accent-gold font-medium">{speaker.role}</p>
-                <p className="text-gray-300">{speaker.company}</p>
+                <p className="text-gray-100">{speaker.company}</p>
               </div>
             </motion.div>
           ))}
@@ -83,7 +83,7 @@ function FeaturedSpeakers() {
 
           <motion.a
             href="/speakers"
-            className="px-8 text-center  py-4 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-full text-lg font-semibold text-white transition-all border border-white/30 hover:border-navy-dark"
+            className="px-8 text-center  py-4 bg-white hover:bg-primary  rounded-full text-lg font-semibold text-dark transition-all border border-primary/90 hover:border-navy-dark"
           >
             View All Speakers
           </motion.a>

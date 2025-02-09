@@ -54,7 +54,7 @@ function Navbar() {
                   location.pathname === link.path
                     ? 'text-primary-dark border-b-2 border-primary-dark'
                     : 'text-accent hover:text-primary-dark hover:border-b-2 border-transparent'
-                } px-3 py-2 ${isScrolled?"":"text-white"} `}
+                } px-3 py-2 ${isScrolled?"":"text-dark"} `}
               >
                 {link.name}
               </Link>

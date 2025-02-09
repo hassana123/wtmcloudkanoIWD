@@ -6,22 +6,24 @@ import Countdown from "../components/Countdown";
 import PastHighlights from "../components/PastHighlights";
 import Sponsors from "../components/Sponsors";
 import FeaturedSpeakers from "../components/FeaturedSpeakers";
-import { MapPin, Calendar, Users, ChevronDown } from "lucide-react";
-import Hero from "../assets/herob.png";
-import HeroMobile from "../assets/herobm.png";
-
+import { MapPin, Calendar, Users, ChevronDown, Globe, Twitter, Instagram } from "lucide-react";
+import hero from "../assets/herob.png";
+import wtm from "../assets/wtm.png"
+import g3w from "../assets/g3w.png"
+import google from "../assets/google.png"
 function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 768);
     };
 
     window.addEventListener("resize", handleResize);
-
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
@@ -33,28 +35,30 @@ function Home() {
   return (
     <div className="relative">
       {/* Hero Section */}
-      <section className="relative h-screen  lg:px-16 overflow-hidden">
-        {/* Background with overlay */}
-        <div
-          className="absolute inset-0  bg-cover bg-center"
+      <section className="relative h-screen overflow-hidden ">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center "
           style={{
-            backgroundImage: `url(${isMobile ? HeroMobile : Hero})`,
-            backgroundPosition: "center center",
-            backgroundSize: "cover",
+            backgroundImage: `url(${hero})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center center'
           }}
-        >
-          <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-black/50" />
-        </div>
+        />
 
         {/* Main Content */}
-        <div className="relative  md:mt-[150px] mt-[130px]   text-white">
-          <div className="flex md:flex-row flex-col md:bg-transparent bg-navy/30 md:w-[95%] w-[98%] mx-auto  justify-between md:backdrop-blur-none backdrop-blur-md py-10 rounded-2xl md:border-none border border-white/10 px-1">
-            <div className="md:w-[70%] ">
-              <motion.h1
+        <div className="relative mx-auto ">
+         
+          <div className="flex flex-col md:flex-row items-start ">
+           
+            {/* Right Content - Event Details (moved to right to avoid overlap) */}
+            <div className="w-full md:w-[50%] md:ml-auto md:mr-5 mt-[50px]  h-[70vh] pt-[60px] bg-gradient-to-br from-primary/20 via-white/5 to-secondary/50 backdrop-blur-sm rounded-xl px-5 ">
+            <div className="md:hidden block">
+          <motion.h1
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
-                className="text-5xl lg:text-7xl font-bold mb-6"
+                className="text-5xl text-navy  font-bold mb-6"
               >
                 Redefine
                 <span className="text-primary-dark block md:mt-0 mt-3 md:ml-0 ml-[45%]">Possible</span>
@@ -64,115 +68,130 @@ function Home() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                className="text-xl lg:text-2xl mb-8  text-whit "
+                className="text-2xl  mb-8  text-dark "
               >
                 International Women's Day 2025
               </motion.p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="px-8 py-4 bg-primary-dark hover:bg-navy rounded-full text-lg font-semibold transition-all shadow-lg hover:shadow-blue-500/25 md:mx-0 mx-auto"
-                >
-                  Register Now
-                </motion.button>
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="mx-auto md:mx-0 md:px-8 px-3 py-4 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-full text-lg font-semibold transition-all border border-white/30 hover:border-navy-dark"
-                >
-                  Apply as a Volunteer
-                </motion.button>
-              </div>
-            </div>
-            <div>
-              {/* Event Details */}
+          </div>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
-                className="space-y-3 text-lg md:mt-0 mt-3 font-medium md:bg-white/5 bg-white  md:backdrop-blur-md p-5 rounded-2xl border border-white/10"
+                className="space-y-6"
               >
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="px-8 py-4 bg-blue-500 text-white rounded-full hover:bg-blue-600 transition-all shadow-lg"
+                  >
+                    Register Now
+                  </motion.button>
+                  <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="px-8 py-4 bg-white/80 backdrop-blur-sm text-blue-500 rounded-full hover:bg-white/90 transition-all border-2 border-blue-500"
+                  >
+                    Apply as a Volunteer
+                  </motion.button>
+                </div>
+
+                {/* Event Details Card */}
                 <motion.div
-                  whileHover={{ scale: 1.05 }}
-                  className="flex items-center gap-3 md:text-white text-dark"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.4 }}
+                  className="space-y-4 bg-white/90 inline-block w-fit-content backdrop-blur-sm p-6 rounded-2xl shadow-lg"
                 >
-                  <MapPin className="w-6 h-6 text-accent-gold" />
-                  <span>Landmark Event Center</span>
+                   <span className="text-sm font-bold text-navy ">
+                  Celebrating Women in Tech <span className="bg-navy mx-2 py-2 px-3 rounded-xl text-white">IWD 2024</span>
+                </span>
+                  <motion.div
+                    whileHover={{ scale: 1.02 }}
+                    className="flex items-center gap-3"
+                  >
+                    <MapPin className="w-6 h-6 text-accent-gold" />
+                    <span className="text-dark">Landmark Event Center</span>
+                  </motion.div>
+                  <motion.div
+                    whileHover={{ scale: 1.02 }}
+                    className="flex items-center gap-3"
+                  >
+                    <Calendar className="w-6 h-6 text-accent-teal" />
+                    <span className="text-dark">8th March 2025</span>
+                  </motion.div>
+                  <motion.div
+                    whileHover={{ scale: 1.02 }}
+                    className="flex items-center gap-3"
+                  >
+                    <Users className="w-6 h-6 text-primary" />
+                    <span className="text-dark">Open to Everyone</span>
+                  </motion.div>
                 </motion.div>
+
+                {/* Countdown */}
                 <motion.div
-                  whileHover={{ scale: 1.05 }}
-                  className="flex items-center gap-3 md:text-white text-dark"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.5 }}
+                  className="bg-navy/70 backdrop-blur-sm py-4 mx-auto rounded-2xl shadow-lg w-fit-content"
                 >
-                  <Calendar className="w-6 h-6 text-primary" />
-                  <span>8th March 2025</span>
-                </motion.div>
-                <motion.div
-                  whileHover={{ scale: 1.05 }}
-                  className="flex items-center gap-3 md:text-white text-dark"
-                >
-                  <Users className="w-6 h-6 text-secondary" />
-                  <span>Open to Everyone</span>
+                  <Countdown targetDate="2025-03-08" />
                 </motion.div>
               </motion.div>
             </div>
           </div>
         </div>
 
-        {/* Countdown Section with Enhanced Decorative Lines */}
-        <div className="hidden md:block absolute bottom-[0%] md:right-[25%] right-[50%] transform translate-x-1/2">
-          {/* Decorative Lines */}
-          <div className="relative hidden md:block ">
-            {/* Main Vertical Line */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 w-[2px] h-32 bg-gradient-to-b from-blue-500/0 via-blue-500 to-blue-500">
-              {/* Dots on Main Line */}
-              <div className="absolute -top-1 left-1/2 transform -translate-x-1/2 w-3 h-3 bg-blue-500 rounded-full" />
-              <div className="absolute top-1/3 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-blue-400 rounded-full" />
-              <div className="absolute top-2/3 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-blue-400 rounded-full" />
+      {/* footer organizers */}
+      <div className="absolute bottom-0 w-full h-16 overflow-hidden bg-navy/80">
+        <div className="marquee-container flex w-full items-center h-full overflow-hidden relative">
+          {/* Scrolling Content */}
+          <div className="flex animate-scroll whitespace-nowrap">
+            {/* First Set of Items */}
+            <div className="flex items-center justify-center px-8 space-x-12">
+              <div className="flex items-center justify-center font-semibold text-sm text-white">
+                <img src={wtm} alt="Women Techmakers" className="h-8 mr-2" />
+                Women Techmakers
+              </div>
+              <div className="flex items-center justify-center font-semibold text-sm text-white">
+                <img src={g3w} alt="G3women" className="h-8 mr-2" />
+                G3women
+              </div>
+              <div className="flex items-center justify-center font-semibold text-sm text-white">
+                <img src={google} alt="Grow with Google" className="h-8 mr-2" />
+                Grow with Google
+              </div>
+            </div>
 
-              {/* Branch Lines */}
-              <div className="absolute top-1/4 left-0 w-8 h-[2px] bg-gradient-to-l from-blue-500 to-blue-500/0">
-                <div className="absolute right-0 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-blue-400 rounded-full" />
+            {/* Second Set of Items (Duplicate for Infinite Loop) */}
+            <div className="flex items-center justify-center px-8 space-x-12">
+              <div className="flex items-center justify-center font-semibold text-sm text-white">
+                <img src={wtm} alt="Women Techmakers" className="h-8 mr-2" />
+                Women Techmakers
               </div>
-              <div className="absolute top-1/2 right-0 w-8 h-[2px] bg-gradient-to-r from-blue-500 to-blue-500/0">
-                <div className="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-blue-400 rounded-full" />
+              <div className="flex items-center justify-center font-semibold text-sm text-white">
+                <img src={g3w} alt="G3women" className="h-8 mr-2" />
+                G3women
               </div>
-              <div className="absolute top-3/4 left-0 w-12 h-[2px] bg-gradient-to-l from-blue-500 to-blue-500/0">
-                <div className="absolute right-0 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-blue-400 rounded-full" />
+              <div className="flex items-center justify-center font-semibold text-sm text-white">
+                <img src={google} alt="Grow with Google" className="h-8 mr-2" />
+                Grow with Google
               </div>
             </div>
           </div>
-
-          {/* Countdown Box */}
-          <motion.div
-            initial={{ y: 20, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
-            className="relative md:mt-[95px] lg:mt-32 bg-white/10 backdrop-blur-md rounded-2xl md:p-6 p-3 border border-white/20 shadow-2xl"
-          >
-            <Countdown targetDate="2025-03-08" />
-          </motion.div>
+        </div>
         </div>
 
-        {/* Scroll Indicator */}
+       {/* Scroll Indicator */}
         <motion.div
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white/80"
+          className="absolute bottom-24 left-1/2 transform -translate-x-1/2 text-blue-500"
         >
           <ChevronDown size={32} />
         </motion.div>
       </section>
-    <div className="bg-gradient-to-br from-primary-light via-navy to-secondary-dark md:hidden block ">
-    <motion.div
-            initial={{ y: 20, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
-            className="relative bg-white/10 backdrop-blur-md rounded-2xl md:p-6 p-3 border border-white/20 shadow-2xl"
-          >
-            <Countdown targetDate="2025-03-08" />
-          </motion.div>
-    </div>
+
       {/* Statistics Section */}
       <motion.section
         initial={{ opacity: 0, y: 50 }}
@@ -221,7 +240,6 @@ function Home() {
         </div>
       </motion.section>
 
-      {/* Featured Speakers Section */}
       <FeaturedSpeakers />
       <PastHighlights />
       <Sponsors />

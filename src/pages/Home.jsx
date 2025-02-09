@@ -1,20 +1,28 @@
 import { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import CountUp from "react-countup";
 import Countdown from "../components/Countdown";
 import PastHighlights from "../components/PastHighlights";
 import Sponsors from "../components/Sponsors";
 import FeaturedSpeakers from "../components/FeaturedSpeakers";
-import { MapPin, Calendar, Users, ChevronDown, Globe, Twitter, Instagram } from "lucide-react";
+import {
+  MapPin,
+  Calendar,
+  Users,
+  ChevronDown,
+  Globe,
+  Twitter,
+  Instagram,
+} from "lucide-react";
 import hero from "../assets/herob.png";
-import wtm from "../assets/wtm.png"
-import g3w from "../assets/g3w.png"
-import google from "../assets/google.png"
+import wtm from "../assets/wtm.png";
+import g3w from "../assets/g3w.png";
+import google from "../assets/google.png";
 function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
-  
+const navigate = useNavigate()
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 768);
@@ -37,42 +45,42 @@ function Home() {
       {/* Hero Section */}
       <section className="relative h-screen overflow-hidden ">
         {/* Background Image */}
-        <div 
+        <div
           className="absolute inset-0 bg-cover bg-center "
           style={{
             backgroundImage: `url(${hero})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center center'
+            backgroundSize: "cover",
+            backgroundPosition: "center center",
           }}
         />
 
         {/* Main Content */}
         <div className="relative mx-auto ">
-         
           <div className="flex flex-col md:flex-row items-start ">
-           
             {/* Right Content - Event Details (moved to right to avoid overlap) */}
             <div className="w-full md:w-[50%] md:ml-auto md:mr-5 mt-[50px]  h-[70vh] pt-[60px] bg-gradient-to-br from-primary/20 via-white/5 to-secondary/50 backdrop-blur-sm rounded-xl px-5 ">
-            <div className="md:hidden block">
-          <motion.h1
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
-                className="text-5xl text-navy  font-bold mb-6"
-              >
-                Redefine
-                <span className="text-primary-dark block md:mt-0 mt-3 md:ml-0 ml-[45%]">Possible</span>
-              </motion.h1>
+              <div className="md:hidden block">
+                <motion.h1
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8 }}
+                  className="text-5xl text-navy  font-bold mb-6"
+                >
+                  Redefine
+                  <span className="text-primary-dark block md:mt-0 mt-3 md:ml-0 ml-[45%]">
+                    Possible
+                  </span>
+                </motion.h1>
 
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-                className="text-2xl  mb-8  text-dark "
-              >
-                International Women's Day 2025
-              </motion.p>
-          </div>
+                <motion.p
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.2 }}
+                  className="text-2xl  mb-8  text-dark "
+                >
+                  International Women's Day 2025
+                </motion.p>
+              </div>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -80,6 +88,7 @@ function Home() {
               >
                 <div className="flex flex-col sm:flex-row gap-4">
                   <motion.button
+                    onClick={() => navigate("/register")}
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     className="px-8 py-4 bg-blue-500 text-white rounded-full hover:bg-blue-600 transition-all shadow-lg"
@@ -87,6 +96,7 @@ function Home() {
                     Register Now
                   </motion.button>
                   <motion.button
+                  onClick={() => navigate("/volunteer")}
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     className="px-8 py-4 bg-white/80 backdrop-blur-sm text-blue-500 rounded-full hover:bg-white/90 transition-all border-2 border-blue-500"
@@ -102,9 +112,12 @@ function Home() {
                   transition={{ delay: 0.4 }}
                   className="space-y-4 bg-white/90 inline-block w-fit-content backdrop-blur-sm p-6 rounded-2xl shadow-lg"
                 >
-                   <span className="text-sm font-bold text-navy ">
-                  Celebrating Women in Tech <span className="bg-navy mx-2 py-2 px-3 rounded-xl text-white">IWD 2024</span>
-                </span>
+                  <span className="text-sm font-bold text-navy ">
+                    Celebrating Women in Tech{" "}
+                    <span className="bg-navy mx-2 py-2 px-3 rounded-xl text-white">
+                      IWD 2024
+                    </span>
+                  </span>
                   <motion.div
                     whileHover={{ scale: 1.02 }}
                     className="flex items-center gap-3"
@@ -142,47 +155,55 @@ function Home() {
           </div>
         </div>
 
-      {/* footer organizers */}
-      <div className="absolute bottom-0 w-full h-16 overflow-hidden bg-navy/80">
-        <div className="marquee-container flex w-full items-center h-full overflow-hidden relative">
-          {/* Scrolling Content */}
-          <div className="flex animate-scroll whitespace-nowrap">
-            {/* First Set of Items */}
-            <div className="flex items-center justify-center px-8 space-x-12">
-              <div className="flex items-center justify-center font-semibold text-sm text-white">
-                <img src={wtm} alt="Women Techmakers" className="h-8 mr-2" />
-                Women Techmakers
+        {/* footer organizers */}
+        <div className="absolute bottom-0 w-full h-16 overflow-hidden bg-navy/80">
+          <div className="marquee-container flex w-full items-center h-full overflow-hidden relative">
+            {/* Scrolling Content */}
+            <div className="flex animate-scroll whitespace-nowrap">
+              {/* First Set of Items */}
+              <div className="flex items-center justify-center px-8 space-x-12">
+                <div className="flex items-center justify-center font-semibold text-sm text-white">
+                  <img src={wtm} alt="Women Techmakers" className="h-8 mr-2" />
+                  Women Techmakers
+                </div>
+                <div className="flex items-center justify-center font-semibold text-sm text-white">
+                  <img src={g3w} alt="G3women" className="h-8 mr-2" />
+                  G3women
+                </div>
+                <div className="flex items-center justify-center font-semibold text-sm text-white">
+                  <img
+                    src={google}
+                    alt="Grow with Google"
+                    className="h-8 mr-2"
+                  />
+                  Grow with Google
+                </div>
               </div>
-              <div className="flex items-center justify-center font-semibold text-sm text-white">
-                <img src={g3w} alt="G3women" className="h-8 mr-2" />
-                G3women
-              </div>
-              <div className="flex items-center justify-center font-semibold text-sm text-white">
-                <img src={google} alt="Grow with Google" className="h-8 mr-2" />
-                Grow with Google
-              </div>
-            </div>
 
-            {/* Second Set of Items (Duplicate for Infinite Loop) */}
-            <div className="flex items-center justify-center px-8 space-x-12">
-              <div className="flex items-center justify-center font-semibold text-sm text-white">
-                <img src={wtm} alt="Women Techmakers" className="h-8 mr-2" />
-                Women Techmakers
-              </div>
-              <div className="flex items-center justify-center font-semibold text-sm text-white">
-                <img src={g3w} alt="G3women" className="h-8 mr-2" />
-                G3women
-              </div>
-              <div className="flex items-center justify-center font-semibold text-sm text-white">
-                <img src={google} alt="Grow with Google" className="h-8 mr-2" />
-                Grow with Google
+              {/* Second Set of Items (Duplicate for Infinite Loop) */}
+              <div className="flex items-center justify-center px-8 space-x-12">
+                <div className="flex items-center justify-center font-semibold text-sm text-white">
+                  <img src={wtm} alt="Women Techmakers" className="h-8 mr-2" />
+                  Women Techmakers
+                </div>
+                <div className="flex items-center justify-center font-semibold text-sm text-white">
+                  <img src={g3w} alt="G3women" className="h-8 mr-2" />
+                  G3women
+                </div>
+                <div className="flex items-center justify-center font-semibold text-sm text-white">
+                  <img
+                    src={google}
+                    alt="Grow with Google"
+                    className="h-8 mr-2"
+                  />
+                  Grow with Google
+                </div>
               </div>
             </div>
           </div>
         </div>
-        </div>
 
-       {/* Scroll Indicator */}
+        {/* Scroll Indicator */}
         <motion.div
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity }}

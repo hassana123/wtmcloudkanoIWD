@@ -6,7 +6,8 @@ import Schedule from './pages/Schedule';
 import Speakers from './pages/Speakers';
 import Team from './pages/Team';
 import Footer from './components/Footer';
-
+import Register from './pages/Register';
+import VolunteerApplication from './pages/Volunteer';
 function App() {
   return (
     <Router>
@@ -19,6 +20,8 @@ function App() {
             <Route path="/schedule" element={<Schedule />} />
             <Route path="/speakers" element={<Speakers />} />
             <Route path="/team" element={<Team />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/volunteer" element={<VolunteerApplication />} />
           </Routes>
         </main>
         <Footer />

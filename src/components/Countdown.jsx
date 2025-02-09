@@ -54,7 +54,7 @@ function Countdown({ targetDate }) {
               {String(block.value).padStart(2, '0')}
             </span>
           </motion.div>
-          <span className="text-white text-sm font-medium">{block.label}</span>
+          <span className="text-dark text-sm font-medium">{block.label}</span>
         </motion.div>
       ))}
     </div>

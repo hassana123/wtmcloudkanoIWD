@@ -127,7 +127,7 @@ function Home() {
                     className="flex items-center gap-3"
                   >
                     <MapPin className="w-6 h-6 text-accent-gold" />
-                    <span className="text-dark">Landmark Event Center</span>
+                    <span className="text-dark">TBD</span>
                   </motion.div>
                   <motion.div
                     whileHover={{ scale: 1.02 }}
@@ -150,7 +150,7 @@ function Home() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.5 }}
-                  className="bg-navy/70 backdrop-blur-sm py-4 mx-auto rounded-2xl shadow-lg w-fit-content"
+                  className="bg-white/60 backdrop-blur-md py-4 mx-auto rounded-2xl shadow-lg inline-block px-8"
                 >
                   <Countdown targetDate="2025-03-08" />
                 </motion.div>

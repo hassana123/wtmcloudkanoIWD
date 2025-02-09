@@ -85,7 +85,7 @@ const Register = () => {
           <ul className="space-y-4 mb-6 text-left">
             <li className="flex items-center">
               <MapPin className="w-6 h-6 text-accent-gold mr-3" />
-              <span>Landmark Event Center</span>
+              <span>TBD</span>
             </li>
             <li className="flex items-center">
               <Calendar className="w-6 h-6 text-accent-teal mr-3" />

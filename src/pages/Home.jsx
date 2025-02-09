@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import CountUp from "react-countup";
@@ -22,7 +22,7 @@ import google from "../assets/google.png";
 function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
-const navigate = useNavigate()
+  const navigate = useNavigate();
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 768);
@@ -39,7 +39,11 @@ const navigate = useNavigate()
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+  const sectionRef = useRef(null); // Reference for the section
 
+  const scrollToSection = () => {
+    sectionRef.current.scrollIntoView({ behavior: "smooth" });
+  };
   return (
     <div className="relative">
       {/* Hero Section */}
@@ -96,7 +100,7 @@ const navigate = useNavigate()
                     Register Now
                   </motion.button>
                   <motion.button
-                  onClick={() => navigate("/volunteer")}
+                    onClick={() => navigate("/volunteer")}
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     className="px-8 py-4 bg-white/80 backdrop-blur-sm text-blue-500 rounded-full hover:bg-white/90 transition-all border-2 border-blue-500"
@@ -205,11 +209,12 @@ const navigate = useNavigate()
 
         {/* Scroll Indicator */}
         <motion.div
+          
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
-          className="absolute bottom-24 left-1/2 transform -translate-x-1/2 text-blue-500"
+          className="absolute  bottom-10 left-1/2 transform -translate-x-1/2 text-blue-500"
         >
-          <ChevronDown size={32} />
+          <ChevronDown onClick={scrollToSection} className="cursor-pointer" size={32} />
         </motion.div>
       </section>
 
@@ -260,10 +265,11 @@ const navigate = useNavigate()
           </motion.div>
         </div>
       </motion.section>
-
-      <FeaturedSpeakers />
-      <PastHighlights />
-      <Sponsors />
+      <div id="sect" ref={sectionRef}>
+        <FeaturedSpeakers />
+        <PastHighlights />
+        <Sponsors />
+      </div>
     </div>
   );
 }

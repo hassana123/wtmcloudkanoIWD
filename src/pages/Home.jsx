@@ -91,14 +91,16 @@ function Home() {
                 className="space-y-6"
               >
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <motion.button
-                    onClick={() => navigate("/register")}
+                <motion.a
+                    href="https://gdg.community.dev/events/details/google-gdg-cloud-kano-presents-international-womens-day-kano-2025-building-breaking-leading/"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     className="px-8 py-4 bg-blue-500 text-white rounded-full hover:bg-blue-600 transition-all shadow-lg"
                   >
                     Register Now
-                  </motion.button>
+                  </motion.a>
                   <motion.button
                     onClick={() => navigate("/volunteer")}
                     whileHover={{ scale: 1.05 }}

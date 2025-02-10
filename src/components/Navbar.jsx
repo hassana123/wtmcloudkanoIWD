@@ -61,12 +61,14 @@ function Navbar() {
             ))}
           </div>
 
-         {location.pathname ==="/register"?"": <button
-            className="md:block hidden btn-primary md:px-3 lg:px-5 py-[5px] rounded-xl lg:text-lg md:text-sm font-semibold shadow-md hover:shadow-lg transition"
-            onClick={() => navigate("/register")}
-          >
-            Register Now
-          </button>}
+         {location.pathname ==="/register"?"":   <motion.a
+              href="https://gdg.community.dev/events/details/google-gdg-cloud-kano-presents-international-womens-day-kano-2025-building-breaking-leading/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="md:block hidden btn-primary md:px-3 lg:px-5 py-[5px] rounded-xl lg:text-lg md:text-sm font-semibold shadow-md hover:shadow-lg transition"
+            >
+              Register Now
+            </motion.a>}
 
           {/* Mobile menu button */}
           <div className={`md:hidden flex items-center1 `}>
@@ -138,12 +140,14 @@ function Navbar() {
               {link.name}
             </Link>
           ))}
-        {location.pathname ==="/register"?"":  <button
-            onClick={() => navigate("/register")}
-            className="w-full btn-primary mt-4 py-3 rounded-lg text-lg font-semibold shadow-md hover:shadow-lg transition"
-          >
-            Register Now
-          </button>}
+        {location.pathname ==="/register"?"":   <motion.a
+              href="https://gdg.community.dev/events/details/google-gdg-cloud-kano-presents-international-womens-day-kano-2025-building-breaking-leading/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full btn-primary mt-4 py-3 rounded-lg text-lg font-semibold shadow-md hover:shadow-lg transition"
+            >
+              Register Now
+            </motion.a>}
         </div>
       </motion.div>
     </motion.nav>

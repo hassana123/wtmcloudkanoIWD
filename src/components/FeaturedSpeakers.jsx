@@ -57,7 +57,7 @@ function FeaturedSpeakers() {
   const [flippedCard, setFlippedCard] = useState(null);
 
   return (
-    <section className="py-10 bg-gradient-to-br from-primary-light via-white to-secondary-light">
+    <section className="py-10 pb-20 bg-gradient-to-br from-primary-light via-white to-secondary-light">
       <div className="container mx-auto px-6">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -72,7 +72,7 @@ function FeaturedSpeakers() {
           Meet some of the incredible minds shaping the future of technology.
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-10">
           {speakers.map((speaker) => (
             <motion.div
               key={speaker.id}
@@ -101,8 +101,8 @@ function FeaturedSpeakers() {
                       <p className="text-primary-dark font-medium">
                         {speaker.role}
                       </p>
-                      <p className="text-gray-600 mb-4">{speaker.company}</p>
-                      <p className="text-sm text-gray-500">{speaker.day}</p>
+                      <p className="text-gray-600 mb-4">{speaker.topic}</p>
+                      
                       <button
                         onClick={() => setFlippedCard(speaker.id)}
                         className="mt-4 px-6 py-2 bg-primary-dark text-white rounded-full hover:bg-primary transition-colors"

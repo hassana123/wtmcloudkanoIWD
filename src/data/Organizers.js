@@ -63,7 +63,7 @@ export const team = [
   },
   {
     name: "Rabia Aminu Ahmad",
-    role: "Graphic Designer",
+    role: "UI/UX Designer",
     image: rabia,
     twitter: "https://x.com/rabia_ameenu",
     linkedin: "https://www.linkedin.com/in/rabia-aminu-ahmad-68b02525b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",

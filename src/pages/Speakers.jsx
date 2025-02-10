@@ -18,19 +18,19 @@ function Speakers() {
           {speakers.map((speaker) => (
             <motion.div
               key={speaker.id}
-              className="relative h-[400px] perspective-1000 mb-[85px]"
+              className="relative h-[400px] mb-[85px] perspective-1000 "
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
               <motion.div
-                className="w-full h-full relative  preserve-3d transition-transform duration-700"
+                className="w-full h-full relative   preserve-3d transition-transform duration-700"
                 animate={{ rotateY: flippedCard === speaker.id ? 180 : 0 }}
               >
                 {/* Front of card */}
-                <div className="absolute w-full  backface-hidden">
+                <div className="absolute w-full   backface-hidden">
                   <div className="bg-white rounded-xl shadow-lg overflow-hidden h-full">
-                    <div className="aspect-w-16 aspect-h-9">
+                    <div className="aspect-w-16 aspect-h-fit-content">
                       <img
                         src={speaker.image}
                         alt={speaker.name}

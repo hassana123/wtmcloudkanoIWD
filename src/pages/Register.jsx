@@ -9,7 +9,6 @@ const Register = () => {
     fullName: "",
     email: "",
     phone: "",
-    ticketType: "Standard", // Default ticket type
     reason: "",
   });
   const [errors, setErrors] = useState({});
@@ -26,28 +25,36 @@ const Register = () => {
     e.preventDefault();
     setIsLoading(true);
     setSubmissionStatus(null);
-
+  
+    // Validate form data
+    if (!formData.fullName || !formData.email || !formData.phone || !formData.reason) {
+      setErrors({ general: "All fields are required." });
+      setIsLoading(false);
+      return;
+    }
+  
     try {
-      const { data, error } = await supabase.from("registrations").insert([{
-        full_name: formData.fullName,
-        email: formData.email,
-        phone: formData.phone,
-        ticket_type: formData.ticketType,
-        reason: formData.reason,
-      }]);
-
+      const { data, error } = await supabase.from("attendees").insert([
+        {
+          full_name: formData.fullName,
+          email: formData.email,
+          phone: formData.phone,
+          reason: formData.reason,
+        },
+      ]);
+  
       if (error) throw error;
-
+  
       setSubmissionStatus({
         success: true,
         message: "Registration completed successfully!",
       });
-
+  
+      // Reset form fields
       setFormData({
         fullName: "",
         email: "",
         phone: "",
-        ticketType: "Standard",
         reason: "",
       });
     } catch (error) {
@@ -55,11 +62,12 @@ const Register = () => {
         success: false,
         message: error.message || "Registration failed.",
       });
-      setErrors(error.message);
+      setErrors({ general: error.message });
     } finally {
       setIsLoading(false);
     }
   };
+  
 
   const scrollToForm = () => {
     formRef.current.scrollIntoView({ behavior: "smooth" });
@@ -128,12 +136,12 @@ const Register = () => {
               animate={{ opacity: 1, scale: 1 }}
               className="text-center"
             >
-              <CheckCircle className="h-16 w-16 text-green-500 mx-auto" />
-              <p className="text-xl text-green-600 mt-4">
+              <CheckCircle className="h-16 w-16 text-forest-dark mx-auto" />
+              <p className="text-xl text-accent-teal mt-4">
                 {submissionStatus.message}
               </p>
               <button
-                className="mt-6 px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition"
+                className="mt-6 px-4 py-2 bg-forest-dark text-white font-medium rounded-lg hover:bg-blue-600 transition"
                 onClick={() => navigate("/")}
               >
                 Back to Home
@@ -147,6 +155,9 @@ const Register = () => {
               className="space-y-6"
             >
               <div>
+              {errors.general && (
+  <p className="text-red-600 text-center">{errors.general}</p>
+)}
                 <label className="block font-medium text-gray-700">
                   Full Name
                 </label>

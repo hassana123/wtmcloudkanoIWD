@@ -129,12 +129,12 @@ const VolunteerApplication = () => {
               animate={{ opacity: 1, scale: 1 }}
               className="text-center"
             >
-              <CheckCircle className="h-16 w-16 text-green-500 mx-auto" />
-              <p className="text-xl text-green-600 mt-4">
+              <CheckCircle className="h-16 w-16 text-forest-dark mx-auto" />
+              <p className="text-xl text-accent-teal mt-4">
                 {submissionStatus.message}
               </p>
               <button
-                className="mt-6 px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition"
+                className="mt-6 px-4 py-2 bg-forest-dark font-medium text-white rounded-lg hover:bg-forest transition"
                 onClick={() => navigate("/")}
               >
                 Back to Home

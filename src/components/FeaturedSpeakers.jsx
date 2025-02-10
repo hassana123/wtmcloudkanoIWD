@@ -1,57 +1,7 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { FaTwitter, FaLinkedin, FaGithub } from "react-icons/fa";
-
-const speakers = [
-  {
-    id: 1,
-    name: "Sarah Johnson",
-    role: "AI Pioneer",
-    company: "Tech Innovations Inc.",
-    image:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-    bio: "Leading AI research and development with over 15 years of experience.",
-    topic: "The Future of AI in Tech",
-    day: "Day 1 - Friday",
-    social: {
-      twitter: "https://twitter.com/sarah",
-      linkedin: "https://linkedin.com/in/sarah",
-      github: "https://github.com/sarah",
-    },
-  },
-  {
-    id: 2,
-    name: "Michelle Chen",
-    role: "Tech Innovator",
-    company: "Future Labs",
-    image:
-      "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-    bio: "Driving tech innovation with a focus on sustainable solutions.",
-    topic: "Sustainable Innovation in Technology",
-    day: "Day 2 - Saturday",
-    social: {
-      twitter: "https://twitter.com/michelle",
-      linkedin: "https://linkedin.com/in/michelle",
-      github: "https://github.com/michelle",
-    },
-  },
-  {
-    id: 3,
-    name: "Angela Martinez",
-    role: "Cybersecurity Expert",
-    company: "SecureNet",
-    image:
-      "https://images.unsplash.com/photo-1594759208462-1d77c3d6d99d?ixid=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-    bio: "Protecting digital infrastructures through cutting-edge security.",
-    topic: "Cybersecurity Trends 2025",
-    day: "Day 3 - Sunday",
-    social: {
-      twitter: "https://twitter.com/angela",
-      linkedin: "https://linkedin.com/in/angela",
-      github: "https://github.com/angela",
-    },
-  },
-];
+import { speakers } from "../data/Speakers";
 
 function FeaturedSpeakers() {
   const [flippedCard, setFlippedCard] = useState(null);

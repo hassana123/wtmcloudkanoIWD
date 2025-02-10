@@ -26,7 +26,7 @@ function FeaturedSpeakers() {
           {speakers.slice(0,3).map((speaker) => (
             <motion.div
               key={speaker.id}
-              className="relative h-[450px] perspective-1000"
+              className="relative h-[400px] perspective-1000"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
             >
@@ -45,13 +45,13 @@ function FeaturedSpeakers() {
                       />
                     </div>
                     <div className="p-6">
-                      <h3 className="text-xl font-bold text-navy mb-2">
+                      <h3 className="text-lg font-semibold text-navy mb-2">
                         {speaker.name}
                       </h3>
-                      <p className="text-primary-dark font-medium">
+                      <p className="text-primary-dark mb-2 font-medium">
                         {speaker.role}
                       </p>
-                      <p className="text-gray-600 mb-4">{speaker.topic}</p>
+                      <p className="text-dark text-sm mb-2">{speaker.topic}</p>
                       
                       <button
                         onClick={() => setFlippedCard(speaker.id)}

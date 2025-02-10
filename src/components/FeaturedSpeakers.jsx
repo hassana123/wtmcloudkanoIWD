@@ -45,7 +45,7 @@ function FeaturedSpeakers() {
                       />
                     </div>
                     <div className="p-6">
-                      <h3 className="text-lg font-semibold text-navy mb-2">
+                      <h3 className="text-md font-semibold text-navy mb-2">
                         {speaker.name}
                       </h3>
                       <p className="text-primary-dark mb-2 font-medium">
@@ -80,21 +80,21 @@ function FeaturedSpeakers() {
                           target="_blank"
                           rel="noopener noreferrer"
                         >
-                          <FaTwitter className="w-6 h-6 text-gray-600 hover:text-primary-dark" />
+                          <FaTwitter className="w-6 h-6 text-primary hover:text-primary-dark" />
                         </a>
                         <a
                           href={speaker.social.linkedin}
                           target="_blank"
                           rel="noopener noreferrer"
                         >
-                          <FaLinkedin className="w-6 h-6 text-gray-600 hover:text-primary-dark" />
+                          <FaLinkedin className="w-6 h-6 text-primary-dark hover:text-primary" />
                         </a>
                         <a
                           href={speaker.social.github}
                           target="_blank"
                           rel="noopener noreferrer"
                         >
-                          <FaGithub className="w-6 h-6 text-gray-600 hover:text-primary-dark" />
+                          <FaGithub className="w-6 h-6 text-dark hover:text-dark/60" />
                         </a>
                       </div>
                       <button

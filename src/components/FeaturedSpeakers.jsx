@@ -23,10 +23,10 @@ function FeaturedSpeakers() {
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-10">
-          {speakers.map((speaker) => (
+          {speakers.slice(0,3).map((speaker) => (
             <motion.div
               key={speaker.id}
-              className="relative h-[400px] perspective-1000"
+              className="relative h-[450px] perspective-1000"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
             >
@@ -45,7 +45,7 @@ function FeaturedSpeakers() {
                       />
                     </div>
                     <div className="p-6">
-                      <h3 className="text-2xl font-bold text-navy mb-2">
+                      <h3 className="text-xl font-bold text-navy mb-2">
                         {speaker.name}
                       </h3>
                       <p className="text-primary-dark font-medium">
@@ -55,7 +55,7 @@ function FeaturedSpeakers() {
                       
                       <button
                         onClick={() => setFlippedCard(speaker.id)}
-                        className="mt-4 px-6 py-2 bg-primary-dSark text-white rounded-full hover:bg-primary transition-colors"
+                        className="mt-4 px-6 py-2 bg-primary-dark text-white rounded-full hover:bg-primary transition-colors"
                       >
                         View Bio
                       </button>

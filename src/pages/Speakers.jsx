@@ -18,7 +18,7 @@ function Speakers() {
           {speakers.map((speaker) => (
             <motion.div
               key={speaker.id}
-              className="relative h-[400px] perspective-1000 mb-[45px]"
+              className="relative h-[400px] perspective-1000 mb-[85px]"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -39,8 +39,8 @@ function Speakers() {
                     </div>
                     <div className="p-6">
                       <h3 className="text-lg font-semibold text-navy mb-2">{speaker.name}</h3>
-                      <p className="text-primary-dark font-medium">{speaker.role}</p>
-                      <p className="text-dark mb-4">{speaker.topic}</p>
+                      <p className="text-primary-dark mb-2 font-medium">{speaker.role}</p>
+                      <p className="text-dark mb-2 text-sm">{speaker.topic}</p>
                     
                       <button
                         onClick={() => setFlippedCard(speaker.id)}
@@ -55,19 +55,19 @@ function Speakers() {
                 {/* Back of card */}
                 <div className=" w-full h-full backface-hidden rotate-y-180">
                   <div className="bg-white rounded-xl shadow-lg overflow-hidden h-full p-6">
-                    <h3 className="text-xl font-bold text-navy mb-4">{speaker.name}</h3>
-                    <p className="text-gray-600 mb-6">{speaker.bio}</p>
+                    <h3 className="text-lg font-semibold text-navy mb-4">{speaker.name}</h3>
+                    <p className="text-dark mb-6">{speaker.bio}</p>
                     <div className="absolute bottom-6 left-6 right-6">
                       <p className="font-medium text-primary-dark mb-4">Topic: {speaker.topic}</p>
                       <div className="flex space-x-4">
                         <a href={speaker.social.twitter} target="_blank" rel="noopener noreferrer">
-                          <FaTwitter className="w-6 h-6 text-gray-600 hover:text-primary-dark" />
+                          <FaTwitter className="w-6 h-6 text-navy hover:text-dark" />
                         </a>
                         <a href={speaker.social.linkedin} target="_blank" rel="noopener noreferrer">
-                          <FaLinkedin className="w-6 h-6 text-gray-600 hover:text-primary-dark" />
+                          <FaLinkedin className="w-6 h-6 text-primary-dark hover:text-primary" />
                         </a>
                         <a href={speaker.social.github} target="_blank" rel="noopener noreferrer">
-                          <FaGithub className="w-6 h-6 text-gray-600 hover:text-primary-dark" />
+                          <FaGithub className="w-6 h-6 text-dark hover:text-dark/50" />
                         </a>
                       </div>
                       <button

@@ -1,27 +1,26 @@
 import { motion } from "framer-motion";
+import g3w from "../assets/g3w.png"
+import wtm from "../assets/wtm.png"
+import google from "../assets/google.png"
 
 function Sponsors() {
   const sponsors = [
     {
       name: "Google",
-      logo: "https://developers.google.com/community/gdg/images/logo-lockup-gdg-horizontal_720.png",
+      logo: google,
       tier: "platinum",
     },
     {
-      name: "Microsoft",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Microsoft_logo.svg/1024px-Microsoft_logo.svg.png",
+      name: "Women TechMakers Cloud Kano",
+      logo: wtm,
       tier: "gold",
     },
     {
-      name: "GitHub",
-      logo: "https://github.githubassets.com/images/modules/logos_page/GitHub-Logo.png",
+      name: "Giggles Glow and Grow Women",
+      logo: g3w,
       tier: "silver",
     },
-    {
-      name: "IBM",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg",
-      tier: "bronze",
-    },
+  
   ];
 
   return (

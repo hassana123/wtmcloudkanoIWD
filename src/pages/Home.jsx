@@ -160,7 +160,7 @@ function Home() {
         </div>
 
         {/* footer organizers */}
-        <div className="absolute bottom-0 w-full h-16 overflow-hidden bg-navy/80">
+        <div className="absolute bottom-0 w-full md:h-10 h-16 overflow-hidden bg-navy/80">
           <div className="marquee-container flex w-full items-center h-full overflow-hidden relative">
             {/* Scrolling Content */}
             <div className="flex animate-scroll whitespace-nowrap">

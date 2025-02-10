@@ -8,6 +8,15 @@ import deeja from "../assets/team/deeja.jpg";
 
 export const team = [
   {
+    name: "Amina Lawal",
+    role: `DevOps Engineer \n(Lead WTM Cloud Kano)`,
+    image: amina,
+    twitter: "https://x.com/amiynarh",
+    linkedin: "https://www.linkedin.com/in/amina-lawal-93284718b/",
+    quote: "Infrastructure as code—because manual work is outdated.",
+    tags: ["organizer", "devs"]
+  },
+  {
     name: "Rasheedat Jamiu",
     role: "DevOps Engineer",
     image: rash,
@@ -18,20 +27,11 @@ export const team = [
   },
   {
     name: "Hassana Abdullahi",
-    role: "Software Developer",
+    role: `Web Developer (WTM Ambassador)`,
     image: hassy,
     twitter: "https://x.com/techSultana",
     linkedin: "https://www.linkedin.com/in/hassana-abdullahi-858040240/",
     quote: "Code is where creativity meets logic.",
-    tags: ["organizer", "devs"]
-  },
-  {
-    name: "Amina Lawal",
-    role: "DevOps Engineer",
-    image: amina,
-    twitter: "https://x.com/amiynarh",
-    linkedin: "https://www.linkedin.com/in/amina-lawal-93284718b/",
-    quote: "Infrastructure as code—because manual work is outdated.",
     tags: ["organizer", "devs"]
   },
   {

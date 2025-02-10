@@ -78,7 +78,7 @@ function Team() {
             <motion.div
               key={index}
               variants={itemVariants}
-              className="bg-navy/70 backdrop-blur-md rounded-2xl shadow-lg border border-white/20 overflow-hidden text-center hover:scale-105 transition-transform duration-300"
+              className="bg-navy/90 backdrop-blur-md rounded-2xl shadow-lg border border-white/20 overflow-hidden text-center hover:scale-105 transition-transform duration-300"
             >
               <img
                 src={member.image}

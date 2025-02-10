@@ -1,83 +1,105 @@
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { useState } from "react";
+import { ChevronDown, ChevronUp } from "lucide-react"; // Import Lucide icons
 
-function About() {
+function FAQ() {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
   });
 
+  const faqs = [
+    {
+      question: "What is this event about?",
+      answer: "This event celebrates International Women's Day by bringing together Nigeria's brightest minds to discuss the role of women in shaping the future of technology, particularly in AI. We aim to inspire, educate, and create opportunities for women in tech.",
+    },
+    {
+      question: "What is the theme of the event?",
+      answer: "The theme, 'Redefine Possible,' challenges traditional boundaries in technology and encourages women to take charge of shaping AI and the tech industry’s future.",
+    },
+    {
+      question: "When and where will the event take place?",
+      answer: "The event will be physical, on the 8th of March 2025. The location will be shared soon.",
+    },
+    {
+      question: "Who can attend this event?",
+      answer: "This event is open to women in tech, aspiring technologists, industry professionals, students, and allies who support gender diversity in technology.",
+    },
+    {
+      question: "Can men attend this event?",
+      answer: "This event is designed as a dedicated space for women in technology, fostering a supportive and empowering environment.",
+    },
+    {
+      question: "How do I register for the event?",
+      answer: "You can register online via this link. We encourage early registration as slots may be limited.",
+    },
+    {
+      question: "Is there a registration fee?",
+      answer: "No, the event is free to attend, but prior registration is required.",
+    },
+    {
+      question: "Will there be networking opportunities?",
+      answer: "Yes! We have networking sessions designed to connect attendees with industry leaders, mentors, and peers.",
+    },
+    {
+      question: "How can I become a sponsor or partner for the event?",
+      answer: "If you’re interested in sponsoring or supporting the event, please contact us here.",
+    },
+    {
+      question: "Who do I contact for further inquiries?",
+      answer: "For any additional questions, reach out to us at g3womenofficial@gmail.com.",
+    },
+    {
+      question: "Will there be prayer sections?",
+      answer: "Designated prayer areas shall be provided.",
+    },
+  ];
+
+  // State to track which FAQ is open
+  const [openFAQIndex, setOpenFAQIndex] = useState(null);
+
+  const toggleFAQ = (index) => {
+    setOpenFAQIndex(openFAQIndex === index ? null : index); // Toggle open/close
+  };
+
   return (
-    <div className="min-h-screen pt-10 bg-gradient-to-br from-primary-light via-white to-secondary-light">
+    <div className="pt-10 bg-gradient-to-br from-primary-light via-white to-secondary-light">
       <motion.section
         ref={ref}
         initial={{ opacity: 0, y: 20 }}
         animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
         transition={{ duration: 0.6 }}
-        className="container mx-auto px-4 py-16"
+        className="container md:w-[70%] mx-auto px-4 py-16"
       >
-        <h1 className="section-title text-center">About the Event</h1>
-        <div className="max-w-4xl mx-auto">
-          {/* Introduction to the Event */}
-          <motion.p
+        <h1 className="text-center text-dark md:text-5xl text-3xl font-bold mb-4">Questions We Get Asked</h1>
+        <p className="text-center text-lg text-dark mb-8">Find answers to some of the most commonly asked questions about our upcoming International Women's Day event. Get all the details you need to attend and participate!</p>
+
+        <div className=" ">
+          <motion.div
             initial={{ opacity: 0 }}
             animate={inView ? { opacity: 1 } : { opacity: 0 }}
             transition={{ delay: 0.2 }}
-            className="text-lg text-gray-700 mb-8"
+            className="text-lg text-dark mb-8"
           >
-            We stand at a pivotal moment where AI is transforming our world—bringing unprecedented opportunities but also risking the amplification of gender biases and systemic barriers. Join us this International Women's Day as we bring together Nigeria's brightest minds to redefine what's possible in technology.
-          </motion.p>
-
-          {/* What is IWD? */}
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={inView ? { opacity: 1 } : { opacity: 0 }}
-            transition={{ delay: 0.3 }}
-            className="text-lg text-gray-700 mb-8"
-          >
-            International Women's Day (IWD) is a global celebration of the social, economic, cultural, and political achievements of women. It is also a call to action to accelerate gender parity and inspire individuals to challenge stereotypes and biases.
-          </motion.p>
-
-          {/* Theme */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-            transition={{ delay: 0.4 }}
-            className="bg-primary-light rounded-lg p-6 mb-12"
-          >
-            <h3 className="text-xl font-bold text-navy mb-4">Theme: <span className="bg-white/60 px-5 py-3 rounded-3xl">Redefine Possible</span> </h3>
-            <p className="text-gray-700">
-              The theme "Redefine Possible" challenges the boundaries of what technology can achieve and reimagines who shapes its future. We are at a pivotal moment where AI is transforming our world—bringing unprecedented opportunities but also risking the amplification of gender biases and systemic barriers. As artificial intelligence becomes woven into society, women are not just participating in its development—they're revolutionizing it, breaking conventions, and expanding the horizons of what technology can and should be.
-            </p>
-            <ul className="mt-4 text-gray-700 list-disc pl-5">
-              <li>Breaking old rules about what's possible in technology and creating new paths forward.</li>
-              <li>Putting women in the driver's seat of technology's future, not just along for the ride.</li>
-              <li>Bringing different viewpoints together to create better technology for everyone.</li>
-              <li>Building technology that helps everyone and thinks about tomorrow, not just today.</li>
-              <li>Taking control of technology's future instead of waiting for others to shape it.</li>
-            </ul>
-          </motion.div>
-
-          {/* Mission & Vision */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-            transition={{ delay: 0.5 }}
-            className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12"
-          >
-            <div className="bg-primary-light rounded-lg p-6">
-              <h3 className="text-xl font-bold text-navy mb-4">Our Mission</h3>
-              <p className="text-gray-700">
-                To inspire and empower women in technology through knowledge sharing, networking, and creating opportunities for growth and innovation.
-              </p>
-            </div>
-
-            <div className="bg-secondary-light rounded-lg p-6">
-              <h3 className="text-xl font-bold text-navy mb-4">Our Vision</h3>
-              <p className="text-gray-700">
-                To build a more inclusive and diverse tech ecosystem where women are equally represented and empowered to lead technological advancement.
-              </p>
-            </div>
+            {/* Looping through the FAQ array */}
+            {faqs.map((faq, index) => (
+              <div key={index} className="mb-4 rounded-lg border-2 bg-white/20 shadow-lg backdrop-blur-xl  border-navy/50 py-2 px-3">
+                <div
+                  className="flex items-center justify-between cursor-pointer   transition-all"
+                  onClick={() => toggleFAQ(index)}
+                >
+                  <h3 className="font-medium text-lg text-dark">{index + 1}. {faq.question}</h3>
+                  <span
+                    className={`transform transition-all text-dark ${openFAQIndex === index ? "rotate-180" : ""}`}
+                    style={{ fontSize: "20px", color: "" }}
+                  >
+                    {openFAQIndex === index ? <ChevronUp className="text" /> : <ChevronDown />} {/* Lucide arrow icon */}
+                  </span>
+                </div>
+                {openFAQIndex === index && <p className="p-4 text-gray-700">{faq.answer}</p>} {/* Display answer when open */}
+              </div>
+            ))}
           </motion.div>
         </div>
       </motion.section>
@@ -85,4 +107,4 @@ function About() {
   );
 }
 
-export default About;
+export default FAQ;

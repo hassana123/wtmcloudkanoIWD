@@ -19,7 +19,7 @@ function Navbar() {
 
   const navLinks = [
     { name: "Home", path: "/" },
-    { name: "About", path: "/about" },
+    { name: "FAQs", path: "/faqs" },
     { name: "Schedule", path: "/schedule" },
     { name: "Speakers", path: "/speakers" },
     { name: "Team", path: "/team" },
@@ -125,12 +125,12 @@ function Navbar() {
           isMobileMenuOpen ? "block" : "hidden"
         } md:hidden bg-white shadow-lg`}
       >
-        <div className="px-4 pt-4 pb-6 space-y-3">
+        <div className="px-4 pt-4 pb-6 space-y-3  mb-5">
           {navLinks.map((link) => (
             <Link
               key={link.name}
               to={link.path}
-              className={`block px-4 py-2 rounded-md text-lg font-medium transition-all ${
+              className={`block  px-4 py-2 rounded-md text-lg font-medium transition-all ${
                 location.pathname === link.path
                   ? "text-primary-dark bg-primary-light shadow-md"
                   : "text-gray-700 hover:text-primary-dark hover:bg-gray-100"
@@ -144,7 +144,7 @@ function Navbar() {
               href="https://gdg.community.dev/events/details/google-gdg-cloud-kano-presents-international-womens-day-kano-2025-building-breaking-leading/"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full btn-primary mt-4 py-3 rounded-lg text-lg font-semibold shadow-md hover:shadow-lg transition"
+              className="inline-block btn-primary mt-4 py-3 rounded-lg text-lg font-semibold shadow-md hover:shadow-lg transition"
             >
               Register Now
             </motion.a>}

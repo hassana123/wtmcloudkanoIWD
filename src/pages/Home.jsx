@@ -19,6 +19,7 @@ import hero from "../assets/herob.png";
 import wtm from "../assets/wtm.png";
 import g3w from "../assets/g3w.png";
 import google from "../assets/google.png";
+import SchedulePreview from "../components/ShedulePreview";
 function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
@@ -270,6 +271,7 @@ function Home() {
       <div id="sect" ref={sectionRef}>
         <FeaturedSpeakers />
         <PastHighlights />
+        <SchedulePreview/>
         <Sponsors />
       </div>
     </div>

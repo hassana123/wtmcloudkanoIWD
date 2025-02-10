@@ -26,7 +26,7 @@ function FeaturedSpeakers() {
           {speakers.slice(0,3).map((speaker) => (
             <motion.div
               key={speaker.id}
-              className="relative h-[400px] perspective-1000"
+              className="relative h-[400px] md:mb-0 mb-[55px] perspective-1000"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
             >
@@ -35,9 +35,9 @@ function FeaturedSpeakers() {
                 animate={{ rotateY: flippedCard === speaker.id ? 180 : 0 }}
               >
                 {/* Front of card */}
-                <div className="absolute w-full backface-hidden">
+                <div className="absolute w-full   backface-hidden">
                   <div className="bg-white rounded-xl shadow-lg overflow-hidden h-full">
-                    <div className="aspect-w-16 aspect-h-fit-content">
+                    <div className="aspect-w-16  ] aspect-h-fit-content">
                       <img
                         src={speaker.image}
                         alt={speaker.name}
@@ -51,7 +51,7 @@ function FeaturedSpeakers() {
                       <p className="text-primary-dark mb-2 font-medium">
                         {speaker.role}
                       </p>
-                      <p className="text-dark text-sm mb-2">{speaker.topic}</p>
+                      <p className="text-dark text-md mb-2">{speaker.topic}</p>
                       
                       <button
                         onClick={() => setFlippedCard(speaker.id)}

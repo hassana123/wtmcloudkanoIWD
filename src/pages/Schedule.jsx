@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useState } from 'react';
-
+import { scheduleItems } from '../data/Shedule';
 function Schedule() {
   const [ref, inView] = useInView({
     triggerOnce: true,
@@ -18,22 +18,13 @@ function Schedule() {
     { id: 'entrepreneurship', name: 'Entrepreneurship' },
   ];
 
-  const scheduleItems = [
-    {
-      time: "9:00 AM",
-      title: "Registration & Networking",
-      track: "general",
-      description: "Start your day with networking and registration",
-    },
-    // Add more schedule items
-  ];
-
+  
   const filteredSchedule = activeTrack === 'all'
     ? scheduleItems
     : scheduleItems.filter(item => item.track === activeTrack);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-primary-light via-white to-secondary-light pt-10 bg-gradient-to-br from-primary-light via-white to-secondary-light">
+    <div className="min-h-screen bg-gradient-to-br from-primary-light via-white to-secondary-light pt-10">
       <motion.section
         ref={ref}
         initial={{ opacity: 0 }}

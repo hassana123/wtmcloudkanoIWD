@@ -46,7 +46,7 @@ function Team() {
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
         variants={containerVariants}
-        className="container mx-auto px-6 py-16"
+        className="container mx-auto py-10"
       >
         <h1 className="text-center text-4xl md:text-5xl font-bold mb-4">
           Meet Our Team
@@ -73,7 +73,7 @@ function Team() {
         </div>
 
         {/* Team Members Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2  md:grid-cols-3 gap-4 mt-12">
           {filteredTeam.map((member, index) => (
             <motion.div
               key={index}

@@ -120,7 +120,7 @@ function FeaturedSpeakers() {
             whileTap={{ scale: 0.95 }}
             className="px-8 text-center py-4 bg-primary-dark hover:bg-navy transition-all rounded-full text-lg font-semibold text-white shadow-md hover:shadow-blue-500/25 border border-transparent hover:border-white"
           >
-            Call for Speakers
+        Apply To Speak
           </motion.a>
 
           <motion.a

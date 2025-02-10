@@ -8,9 +8,9 @@ function Speakers() {
 
   return (
     <div className="h-full pt-10 pb-10 bg-gradient-to-br from-primary-light via-white to-secondary-light">
-      <div className="container mx-auto  py-16">
+      <div className="container mx-auto  py-10">
         <h1 className="text-5xl font-bold text-center mb-4">Meet Our Speakers</h1>
-        <p className="text-xl text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+        <p className="text-xl text-gray-600 text-center mb-6 max-w-2xl mx-auto">
           Learn from industry leaders and innovators who are reshaping the future of technology
         </p>
 
@@ -18,7 +18,7 @@ function Speakers() {
           {speakers.map((speaker) => (
             <motion.div
               key={speaker.id}
-              className="relative h-[400px] perspective-1000 my-[45px]"
+              className="relative h-[400px] perspective-1000 mb-[45px]"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -38,7 +38,7 @@ function Speakers() {
                       />
                     </div>
                     <div className="p-6">
-                      <h3 className="text-xl font-bold text-navy mb-2">{speaker.name}</h3>
+                      <h3 className="text-lg font-semibold text-navy mb-2">{speaker.name}</h3>
                       <p className="text-primary-dark font-medium">{speaker.role}</p>
                       <p className="text-dark mb-4">{speaker.topic}</p>
                     

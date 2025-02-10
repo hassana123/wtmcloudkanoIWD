@@ -110,6 +110,27 @@ function FeaturedSpeakers() {
             </motion.div>
           ))}
         </div>
+           {/* Buttons */}
+           <div className="mt-[120px] flex flex-col sm:flex-row justify-center gap-6">
+          <motion.a
+            href="https://sessionize.com/IWDKANO25"
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="px-8 text-center py-4 bg-primary-dark hover:bg-navy transition-all rounded-full text-lg font-semibold text-white shadow-md hover:shadow-blue-500/25 border border-transparent hover:border-white"
+          >
+            Call for Speakers
+          </motion.a>
+
+          <motion.a
+            href="/speakers"
+            className="px-8 text-center  py-4 bg-white hover:bg-primary  rounded-full text-lg font-semibold text-dark transition-all border border-primary/90 hover:border-navy-dark"
+          >
+            View All Speakers
+          </motion.a>
+        </div>
+
       </div>
     </section>
   );

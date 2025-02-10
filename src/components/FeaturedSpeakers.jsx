@@ -105,7 +105,7 @@ function FeaturedSpeakers() {
                       
                       <button
                         onClick={() => setFlippedCard(speaker.id)}
-                        className="mt-4 px-6 py-2 bg-primary-dark text-white rounded-full hover:bg-primary transition-colors"
+                        className="mt-4 px-6 py-2 bg-primary-dSark text-white rounded-full hover:bg-primary transition-colors"
                       >
                         View Bio
                       </button>

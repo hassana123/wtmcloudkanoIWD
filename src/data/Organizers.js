@@ -9,7 +9,7 @@ import deeja from "../assets/team/deeja.jpg";
 export const team = [
   {
     name: "Amina Lawal",
-    role: `DevOps Engineer \n(Lead WTM Cloud Kano)`,
+    role: `DevOps Engineer WTM Ambassador & Lead GDG Cloud Kano`,
     image: amina,
     twitter: "https://x.com/amiynarh",
     linkedin: "https://www.linkedin.com/in/amina-lawal-93284718b/",
@@ -63,7 +63,7 @@ export const team = [
   },
   {
     name: "Rabia Aminu Ahmad",
-    role: "UI/UX Designer",
+    role: "UI/UX Desgner",
     image: rabia,
     twitter: "https://x.com/rabia_ameenu",
     linkedin: "https://www.linkedin.com/in/rabia-aminu-ahmad-68b02525b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",

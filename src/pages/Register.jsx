@@ -3,36 +3,55 @@ import { motion } from "framer-motion";
 import { CheckCircle, Calendar, Users, MapPin } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import supabase from "../../superbaseConfig";
-import ilt from "../assets/ilt.png"
+import ilt from "../assets/ilt.png";
+
 const Register = () => {
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
     phone: "",
     reason: "",
+    eventSource: "",
+    breakoutRoom: "",
   });
   const [errors, setErrors] = useState({});
   const [submissionStatus, setSubmissionStatus] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
-  const formRef = useRef(null); // Reference for smooth scrolling to the form
+  const formRef = useRef(null);
   const navigate = useNavigate();
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  const validateForm = () => {
+    const newErrors = {};
+    if (!formData.fullName) newErrors.fullName = "Full Name is required.";
+    if (!formData.email) newErrors.email = "Email is required.";
+    else if (!/^[\w.%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(formData.email))
+      newErrors.email = "Invalid email format.";
+    if (!formData.phone) newErrors.phone = "Phone number is required.";
+    else if (!/^\d{10,15}$/.test(formData.phone))
+      newErrors.phone = "Phone number must be between 10-15 digits.";
+    if (!formData.reason) newErrors.reason = "Reason for attending is required.";
+    if (!formData.eventSource)
+      newErrors.eventSource = "Please select how you learned about the event.";
+    if (!formData.breakoutRoom)
+      newErrors.breakoutRoom = "Please select a breakout room.";
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
     setSubmissionStatus(null);
-  
-    // Validate form data
-    if (!formData.fullName || !formData.email || !formData.phone || !formData.reason) {
-      setErrors({ general: "All fields are required." });
+
+    if (!validateForm()) {
       setIsLoading(false);
       return;
     }
-  
+
     try {
       const { data, error } = await supabase.from("attendees").insert([
         {
@@ -40,22 +59,25 @@ const Register = () => {
           email: formData.email,
           phone: formData.phone,
           reason: formData.reason,
+          event_source: formData.eventSource,
+          breakout_room: formData.breakoutRoom,
         },
       ]);
-  
+
       if (error) throw error;
-  
+
       setSubmissionStatus({
         success: true,
         message: "Registration completed successfully!",
       });
-  
-      // Reset form fields
+
       setFormData({
         fullName: "",
         email: "",
         phone: "",
         reason: "",
+        eventSource: "",
+        breakoutRoom: "",
       });
     } catch (error) {
       setSubmissionStatus({
@@ -67,7 +89,6 @@ const Register = () => {
       setIsLoading(false);
     }
   };
-  
 
   const scrollToForm = () => {
     formRef.current.scrollIntoView({ behavior: "smooth" });
@@ -93,7 +114,7 @@ const Register = () => {
           <ul className="space-y-4 mb-6 text-left">
             <li className="flex items-center">
               <MapPin className="w-6 h-6 text-accent-gold mr-3" />
-              <span>TBD</span>
+              <span>Baba Ahmad University</span>
             </li>
             <li className="flex items-center">
               <Calendar className="w-6 h-6 text-accent-teal mr-3" />
@@ -105,7 +126,7 @@ const Register = () => {
             </li>
           </ul>
           <motion.img
-            src={ilt} 
+            src={ilt}
             alt="Illustration"
             className="w-48 h-auto ml-auto mb-6 rounded-xl"
             initial={{ opacity: 0, y: 20 }}
@@ -154,10 +175,10 @@ const Register = () => {
               onSubmit={handleSubmit}
               className="space-y-6"
             >
-              <div>
               {errors.general && (
-  <p className="text-red-600 text-center">{errors.general}</p>
-)}
+                <p className="text-red-600 text-center">{errors.general}</p>
+              )}
+              <div>
                 <label className="block font-medium text-gray-700">
                   Full Name
                 </label>
@@ -201,6 +222,49 @@ const Register = () => {
                 />
                 {errors.phone && (
                   <p className="text-red-600">{errors.phone}</p>
+                )}
+              </div>
+              <div>
+                <label className="block font-medium text-gray-700">
+                  How did you learn about this event?
+                </label>
+                <select
+                  name="eventSource"
+                  className="w-full p-3 border rounded-lg focus:outline-none focus:ring focus:ring-blue-300"
+                  value={formData.eventSource}
+                  onChange={handleChange}
+                  required
+                >
+                  <option value="">Select an option</option>
+                  <option value="social_media">Social Media</option>
+                  <option value="community_notification">Notified by this community</option>
+                  <option value="meetup">Women TechMakers Group</option>
+                  <option value="friend_recommendation">Recommended by a friend or peer</option>
+                  <option value="other">Other</option>
+                </select>
+                {errors.eventSource && (
+                  <p className="text-red-600">{errors.eventSource}</p>
+                )}
+              </div>
+              <div>
+                <label className="block font-medium text-gray-700">
+                  Select Breakout Room
+                </label>
+                <select
+                  name="breakoutRoom"
+                  className="w-full p-3 border rounded-lg focus:outline-none focus:ring focus:ring-blue-300"
+                  value={formData.breakoutRoom}
+                  onChange={handleChange}
+                  required
+                >
+                  <option value="">Select a breakout room</option>
+                  <option value="resume_building">Resume Building </option>
+                  <option value="codewars">Code War Rooms(DSA)</option>
+                  <option value="cloud_devops">Cloud & DevOps Hands-on Workshop</option>
+                  <option value="soft_skills">Soft Skills for Career Growth</option>
+                </select>
+                {errors.breakoutRoom && (
+                  <p className="text-red-600">{errors.breakoutRoom}</p>
                 )}
               </div>
               <div>

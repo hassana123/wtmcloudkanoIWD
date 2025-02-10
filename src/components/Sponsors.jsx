@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
-import g3w from "../assets/g3w.png"
-import wtm from "../assets/wtm.png"
-import google from "../assets/google.png"
+import g3w from "../assets/g3w.png";
+import wtm from "../assets/wtm.png";
+import google from "../assets/google.png";
 
 function Sponsors() {
   const sponsors = [
@@ -20,7 +20,6 @@ function Sponsors() {
       logo: g3w,
       tier: "silver",
     },
-  
   ];
 
   return (
@@ -64,7 +63,7 @@ function Sponsors() {
           <motion.a
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            href="#"
+            href="https://docs.google.com/presentation/d/1_gmYS6eMM2on6OGJdf3VLL1gnw5QnmEZ0tWMx_-k2_k/edit?usp=sharing"
             className="px-8 py-4 bg-primary-dark hover:bg-navy transition-all rounded-full text-lg font-semibold text-white shadow-md hover:shadow-blue-500/25 border border-transparent hover:border-white"
           >
             Sponsor Us

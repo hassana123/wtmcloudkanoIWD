@@ -32,7 +32,20 @@ function FAQ() {
     },
     {
       question: "How do I register for the event?",
-      answer: "You can register online via this link. We encourage early registration as slots may be limited.",
+      answer: (
+        <span>
+          You can register online via this{" "}
+          <a
+            href="https://gdg.community.dev/events/details/google-gdg-cloud-kano-presents-international-womens-day-kano-2025-building-breaking-leading/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary hover:underline"
+          >
+            link
+          </a>
+          . We encourage early registration as slots may be limited.
+        </span>
+      ),
     },
     {
       question: "Is there a registration fee?",
@@ -44,7 +57,20 @@ function FAQ() {
     },
     {
       question: "How can I become a sponsor or partner for the event?",
-      answer: "If you’re interested in sponsoring or supporting the event, please contact us here.",
+      answer: (
+        <span>
+          If you’re interested in sponsoring or supporting the event, please{" "}
+          <a
+            href="https://docs.google.com/presentation/d/1_gmYS6eMM2on6OGJdf3VLL1gnw5QnmEZ0tWMx_-k2_k/edit#slide=id.g2d817b25dee_4_4"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary hover:underline"
+          >
+            contact us here
+          </a>
+          .
+        </span>
+      ),
     },
     {
       question: "Who do I contact for further inquiries?",

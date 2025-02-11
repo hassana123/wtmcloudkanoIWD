@@ -6,6 +6,7 @@ import Countdown from "../components/Countdown";
 import PastHighlights from "../components/PastHighlights";
 import Sponsors from "../components/Sponsors";
 import FeaturedSpeakers from "../components/FeaturedSpeakers";
+import FollowUsSection from "../components/FollowUs";
 import {
   MapPin,
   Calendar,
@@ -273,6 +274,7 @@ function Home() {
         <PastHighlights />
         <SchedulePreview/>
         <Sponsors />
+        <FollowUsSection/>
       </div>
     </div>
   );

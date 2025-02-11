@@ -1,4 +1,3 @@
-import img1 from "../assets/1.jpeg";
 import img2 from "../assets/2.jpeg";
 import img3 from "../assets/3.jpeg";
 import img4 from "../assets/4.jpeg";
@@ -49,10 +48,6 @@ export const photos = [
   {
     url: img6,
     caption: "IWD Dare to Be",
-  },
-  {
-    url: img1,
-    caption: "IWD -Power Panel",
   },
   {
     url: img14,

@@ -23,7 +23,7 @@ const FollowUsSection = () => {
          </div>
 
            <div className='flex gap-4 justify-center'>
-             Facebook
+             {/* Facebook */}
              {/* <a
               href="https://facebook.com"
               target="_blank"

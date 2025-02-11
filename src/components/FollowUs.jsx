@@ -43,7 +43,7 @@ const FollowUsSection = () => {
             </a>
             {/* Instagram */}
             <a
-              href="https://instagram.com"
+              href="https://www.instagram.com/kanowtm?igsh=YTNhM2Fsd3FicXlk&utm_source=qr"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-500 text-white hover:text-white/80 hover:shadow-md transition"
@@ -51,7 +51,7 @@ const FollowUsSection = () => {
               <Instagram className="w-6 h-6" />
             </a>
             {/* LinkedIn */}
-            <a
+            {/* <a
               href="https://linkedin.com"
               target="_blank"
               rel="noopener noreferrer"
@@ -59,7 +59,7 @@ const FollowUsSection = () => {
             >
               <Linkedin className="w-6 h-6" />
             </a>
-         
+          */}
             </div> 
             </div>
 
@@ -81,7 +81,7 @@ const FollowUsSection = () => {
             </a> */}
             {/* Twitter */}
             <a
-              href="https://twitter.com"
+              href="https://x.com/g3womenofficial?s=21"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center w-12 h-12 rounded-full bg-white text-blue-400 hover:text-blue-600 hover:shadow-md transition"
@@ -90,7 +90,7 @@ const FollowUsSection = () => {
             </a>
             {/* Instagram */}
             <a
-              href="https://instagram.com"
+              href="https://www.instagram.com/g3womenofficial?igsh=MW81bWJiaDdhZTF3eA%3D%3D&utm_source=qr"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-500 text-white hover:text-white/80 hover:shadow-md transition"
@@ -99,7 +99,7 @@ const FollowUsSection = () => {
             </a>
             {/* LinkedIn */}
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/company/g3womenofficial"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center w-12 h-12 rounded-full bg-white text-blue-700 hover:text-blue-900 hover:shadow-md transition"
@@ -111,7 +111,7 @@ const FollowUsSection = () => {
 
           {/* Button - G3Women */}
           <button
-            onClick={() => window.open('https://wtmcloudkano.com', '_blank')}
+            onClick={() => window.open('https://join.slack.com/t/g3women/shared_invite/zt-2zm5m7ysz-AIzLlwGup4aaSIhvjY6ytg')}
             className="bg-white block text-navy-dark font-medium border-2 border-navy-dark/50 px-6 py-3 hover:text-white rounded-lg shadow-lg hover:bg-navy-dark transition lg::w-[30%] mx-auto"
           >
             Let's go →

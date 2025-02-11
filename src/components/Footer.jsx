@@ -54,16 +54,16 @@ function Footer() {
                 >
                   <FaTwitter className="h-6 w-6" />
                 </a>
-                <a
+                {/* <a
                   href="https://linkedin.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-300 hover:text-primary transition-colors"
                 >
                   <FaLinkedin className="h-6 w-6" />
-                </a>
+                </a> */}
                 <a
-                  href="https://instagram.com"
+                  href="https://www.instagram.com/kanowtm?igsh=YTNhM2Fsd3FicXlk&utm_source=qr"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-300 hover:text-primary transition-colors"
@@ -76,7 +76,7 @@ function Footer() {
               <p className="mt-2 text-sm">Follow G3Women (G3W):</p>
               <div className="flex space-x-4">
                 <a
-                  href="https://twitter.com"
+                  href="https://x.com/g3womenofficial?s=21"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-300 hover:text-primary transition-colors"
@@ -84,7 +84,7 @@ function Footer() {
                   <FaTwitter className="h-6 w-6" />
                 </a>
                 <a
-                  href="https://linkedin.com"
+                  href="https://www.linkedin.com/company/g3womenofficial"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-300 hover:text-primary transition-colors"
@@ -92,7 +92,7 @@ function Footer() {
                   <FaLinkedin className="h-6 w-6" />
                 </a>
                 <a
-                  href="https://instagram.com"
+                  href="https://www.instagram.com/g3womenofficial?igsh=MW81bWJiaDdhZTF3eA%3D%3D&utm_source=qr"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-300 hover:text-primary transition-colors"

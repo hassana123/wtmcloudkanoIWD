@@ -5,7 +5,7 @@ import vibes from "../assets/16.jpeg";
 const FollowUsSection = () => {
   return (
     <section className="bg-gradient-to-bl from-primary to-navy text-white py-10">
-      <div className="container mx-auto grid md:grid-cols-2 items-center justify-between">
+      <div className="container mx-auto grid md:grid-cols-2 items-center justify-between space-y-8 md:space-y-0">
         {/* Left Side */}
         <div className='px-2 md:px-0'>
           <h2 className="text-3xl md:text-5xl font-bold mb-4">Follow Us</h2>
@@ -65,7 +65,7 @@ const FollowUsSection = () => {
 
           {/* Social Media Links - G3Women */}
           
-          <div className="md:flex gap-4  mb-6 ">
+          <div className="md:flex gap-4  mb-8 ">
          <div className='mb-3'>
              <span className=" text-sm block text-center">G3Women:</span>
          </div>
@@ -112,7 +112,7 @@ const FollowUsSection = () => {
           {/* Button - G3Women */}
           <button
             onClick={() => window.open('https://wtmcloudkano.com', '_blank')}
-            className="bg-white block text-navy-dark font-medium border-2 border-navy-dark/50 px-6 py-3 hover:text-white rounded-lg shadow-lg hover:bg-navy-dark transition md:w-[30%] mb-5 mx-auto"
+            className="bg-white block text-navy-dark font-medium border-2 border-navy-dark/50 px-6 py-3 hover:text-white rounded-lg shadow-lg hover:bg-navy-dark transition md:w-[30%] mx-auto"
           >
             Let's go →
           </button>

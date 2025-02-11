@@ -47,7 +47,7 @@ function Footer() {
               <p className="mt-2 text-sm">Follow Women Techmakers (WTMCloudKano):</p>
               <div className="flex space-x-4 mb-4">
                 <a
-                  href="https://twitter.com"
+                  href="https://x.com/KanoWtm?t=7gjpu8Uc6obmTkVa9ukhFg&s=09"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-300 hover:text-primary transition-colors"

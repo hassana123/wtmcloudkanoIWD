@@ -34,7 +34,7 @@ const FollowUsSection = () => {
             </a>
             {/* Twitter */}
             <a
-              href="https://twitter.com"
+              href="https://x.com/KanoWtm?t=7gjpu8Uc6obmTkVa9ukhFg&s=09"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center w-12 h-12 rounded-full bg-white text-blue-400 hover:text-blue-600 hover:shadow-md transition"

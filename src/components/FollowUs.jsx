@@ -40,7 +40,7 @@ const FollowUsSection = () => {
               href="https://instagram.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-500 text-white hover:shadow-md transition"
+              className="flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-500 text-white hover:text-white/80 hover:shadow-md transition hover"
             >
               <Instagram className="w-6 h-6" />
             </a>

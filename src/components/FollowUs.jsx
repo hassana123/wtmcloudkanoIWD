@@ -23,15 +23,15 @@ const FollowUsSection = () => {
          </div>
 
            <div className='flex gap-4 justify-center'>
-             {/* Facebook */}
-             <a
+             Facebook
+             {/* <a
               href="https://facebook.com"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center w-12 h-12 rounded-full bg-white text-blue-600 hover:text-blue-800 hover:shadow-md transition"
             >
               <Facebook className="w-6 h-6" />
-            </a>
+            </a> */}
             {/* Twitter */}
             <a
               href="https://x.com/KanoWtm?t=7gjpu8Uc6obmTkVa9ukhFg&s=09"
@@ -71,14 +71,14 @@ const FollowUsSection = () => {
          </div>
             <div className='flex gap-3 justify-center'>
                 {/* Facebook */}
-            <a
+            {/* <a
               href="https://facebook.com"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center w-12 h-12 rounded-full bg-white text-blue-600 hover:text-blue-800 hover:shadow-md transition"
             >
               <Facebook className="w-6 h-6" />
-            </a>
+            </a> */}
             {/* Twitter */}
             <a
               href="https://twitter.com"

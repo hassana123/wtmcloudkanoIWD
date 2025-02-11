@@ -5,7 +5,7 @@ import vibes from "../assets/16.jpeg";
 const FollowUsSection = () => {
   return (
     <section className="bg-gradient-to-bl from-primary to-navy text-white py-10">
-      <div className="container mx-auto grid md:grid-cols-2 items-center justify-between space-y-8 md:space-y-0">
+      <div className="lg:container  lg:mx-auto mx-3 grid md:grid-cols-2 items-center justify-between space-y-8 md:space-y-0">
         {/* Left Side */}
         <div className='px-2 md:px-0'>
           <h2 className="text-3xl md:text-5xl font-bold mb-4">Follow Us</h2>
@@ -112,7 +112,7 @@ const FollowUsSection = () => {
           {/* Button - G3Women */}
           <button
             onClick={() => window.open('https://wtmcloudkano.com', '_blank')}
-            className="bg-white block text-navy-dark font-medium border-2 border-navy-dark/50 px-6 py-3 hover:text-white rounded-lg shadow-lg hover:bg-navy-dark transition md:w-[30%] mx-auto"
+            className="bg-white block text-navy-dark font-medium border-2 border-navy-dark/50 px-6 py-3 hover:text-white rounded-lg shadow-lg hover:bg-navy-dark transition lg::w-[30%] mx-auto"
           >
             Let's go →
           </button>
@@ -123,7 +123,7 @@ const FollowUsSection = () => {
           <img
             src={vibes}
             alt="WTM and G3Women"
-            className="rounded-xl mx-auto md:mx-0 md:w-[80vh] md:ml-auto h-[55vh] w-[95%]  shadow-xl"
+            className="rounded-xl md:mx-0 mx-auto lg:w-[80vh] md:ml-auto h-[55vh] md:w-[80%] w-[90%]  shadow-xl"
           />
         </div>
       </div>

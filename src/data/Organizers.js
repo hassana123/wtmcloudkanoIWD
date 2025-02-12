@@ -19,7 +19,7 @@ export const team = [
     twitter: "https://x.com/amiynarh",
     linkedin: "https://www.linkedin.com/in/amina-lawal-93284718b/",
     quote: "Empowering technology through scalable infrastructure and automation.",
-    tags: ["organizer", "devs"],
+    tags: ["organizer", "devs", "content"],
   },
   {
     name: "Rasheedat Jamiu",
@@ -37,7 +37,7 @@ export const team = [
     twitter: "https://x.com/techSultana",
     linkedin: "https://www.linkedin.com/in/hassana-abdullahi-858040240/",
     quote: "Creating functional and beautiful web experiences.",
-    tags: ["organizer", "devs"],
+    tags: ["organizer", "devs", "product"],
   },
   {
     name: "Salima Rabiu",
@@ -46,7 +46,7 @@ export const team = [
     twitter: "https://x.com/safe__ti",
     linkedin: "https://linkedin.com/in/eemarabs",
     quote: "Leadership is about creating change and inspiring others.",
-    tags: ["organizer", "devs"],
+    tags: ["organizer", "devs", "content"],
   },
   {
     name: "Khadija Jebu",
@@ -100,7 +100,7 @@ export const team = [
     twitter: "https://x.com/rabia_ameenu",
     linkedin: "https://www.linkedin.com/in/rabia-aminu-ahmad-68b02525b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     quote: "Designing visuals that communicate and inspire.",
-    tags: ["content", "organizer"],
+    tags: ["content", "organizer", "designers"],
   },
   {
     name: "Azeemah Raji",
@@ -118,7 +118,7 @@ export const team = [
     twitter: "https://x.com/ay_sharh?s=21&mx=2",
     linkedin: "#",
     quote: "Connecting people with brands that inspire and create impact.",
-    tags: ["marketing", "organizer"],
+    tags: ["product", "organizer"],
   }
 ];
 

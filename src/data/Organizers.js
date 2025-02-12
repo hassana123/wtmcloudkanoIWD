@@ -2,11 +2,14 @@ import amina from "../assets/team/amina.jpeg";
 import ope from "../assets/team/ope.jpeg";
 import bili from "../assets/team/bili.jpeg";
 import hassy from "../assets/team/hassy.jpeg";
-import habiba from "../assets/team/rabia.jpeg";
+import habiba from "../assets/team/habiba.jpeg";
 import rash from "../assets/team/rash.jpg";
 import deeja from "../assets/team/deeja.jpg";
 import margret from "../assets/team/margret.jpeg";
 import salima from "../assets/team/salima.jpg";
+import aisha from "../assets/team/aisha.jpeg";
+import rabia from "../assets/team/rabia.jpeg";
+import azeemah from "../assets/team/.jpg";
 
 export const team = [
   {
@@ -45,7 +48,6 @@ export const team = [
     quote: "Leadership is about creating change and inspiring others.",
     tags: ["organizer", "devs"],
   },
- 
   {
     name: "Khadija Jebu",
     role: "Public Relations Manager",
@@ -53,16 +55,16 @@ export const team = [
     twitter: "https://x.com/deeje_?s=21",
     linkedin: "https://www.linkedin.com/in/khadija-sulaiman-jebu-68b78b250?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
     quote: "Building connections that foster growth and innovation.",
-    tags: ["content","organizer" ],
+    tags: ["content", "organizer"],
   },
   {
     name: "Bilikisu Abdulgafar",
-    role: "HR Specialist",
+    role: "Project Management/Content Development",
     image: bili,
     twitter: "https://x.com/balqeesuh?s=21",
     linkedin: "https://www.linkedin.com/in/balqees-abdulgafar-9b6a7918a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
     quote: "Empowering people is the foundation of successful teams.",
-    tags: ["product","organizer"],
+    tags: ["product", "organizer", "content"],
   },
   {
     name: "Barakat Opeyemi Abdulhakeem",
@@ -71,7 +73,7 @@ export const team = [
     twitter: "https://x.com/EwaTechie?t=MwYttcxL4juY61txelSYNA&s=09",
     linkedin: "https://www.linkedin.com/in/opeyemi-abdulhakeem-a14aa8240?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     quote: "Designing user-centric experiences with purpose and creativity.",
-    tags: ["designers","organizer"],
+    tags: ["designers", "organizer"],
   },
   {
     name: "Margret Edeh",
@@ -86,27 +88,46 @@ export const team = [
     name: "Habiba Gambo Dantata",
     role: "Entrepreneur",
     image: habiba,
-    twitter: "",
-    linkedin: "",
+    twitter: "#",
+    linkedin: "#",
     quote: "Driving innovation through entrepreneurship and collaboration.",
-    tags: ["content","organizer"],
+    tags: ["content", "organizer"],
   },
   {
     name: "Rabia Aminu Ahmed",
     role: "Graphics Designer",
-    image: "",
+    image: rabia,
     twitter: "https://x.com/rabia_ameenu",
     linkedin: "https://www.linkedin.com/in/rabia-aminu-ahmad-68b02525b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     quote: "Designing visuals that communicate and inspire.",
-    tags: ["content","organizer"],
+    tags: ["content", "organizer"],
   },
   {
-    name: "Ummuhani Musa",
-    role: "Project Manager",
-    image: "", // Placeholder since no image is provided
-    twitter: "https://x.com/ummulaymanoiza?s=21",
-    linkedin: "https://www.linkedin.com/in/ummuhani-musa-b245a61b9?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
-    quote: "Transforming impactful ideas into actionable discussions.",
-    tags: ["content", "organizer"],
+    name: "Azeemah Raji",
+    role: "DevOps Engineer",
+    image: azeemah,
+    twitter: "https://x.com/zeemaarh?s=21",
+    linkedin: "http://linkedin.com/in/azeematraji",
+    quote: "Building robust infrastructures that scale with precision and care.",
+    tags: ["devs", "organizer"],
+  },
+  {
+    name: "Aisha Yakeen",
+    role: "Marketing and Promotions",
+    image: aisha,
+    twitter: "https://x.com/ay_sharh?s=21&mx=2",
+    linkedin: "#",
+    quote: "Connecting people with brands that inspire and create impact.",
+    tags: ["marketing", "organizer"],
   }
 ];
+
+// {
+//   name: "Ummuhani Musa",
+//   role: "Project Manager",
+//   image: "", // Placeholder since no image is provided
+//   twitter: "https://x.com/ummulaymanoiza?s=21",
+//   linkedin: "https://www.linkedin.com/in/ummuhani-musa-b245a61b9?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+//   quote: "Transforming impactful ideas into actionable discussions.",
+//   tags: ["content", "organizer"],
+// }

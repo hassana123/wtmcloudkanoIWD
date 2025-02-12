@@ -123,7 +123,7 @@ function Home() {
                   <span className="text-sm font-bold text-navy ">
                     Celebrating Women in Tech{" "}
                     <span className="bg-navy mx-2 py-2 px-3 rounded-xl text-white">
-                      IWD 2024
+                      IWD 2025
                     </span>
                   </span>
                   <motion.div

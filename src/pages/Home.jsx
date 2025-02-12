@@ -92,7 +92,7 @@ function Home() {
                 animate={{ opacity: 1, y: 0 }}
                 className="space-y-6"
               >
-                <div className="flex flex-col sm:flex-row gap-4">
+                <div id="register" className="flex flex-col sm:flex-row gap-4">
                   <motion.a
                     href="https://gdg.community.dev/events/details/google-gdg-cloud-kano-presents-international-womens-day-kano-2025-building-breaking-leading/"
                     target="_blank"

@@ -38,12 +38,12 @@ export const team = [
   },
   {
     name: "Salima Rabiu",
-    role: "Organizer",
+    role: "DevOps Engineer",
     image: salima,
     twitter: "https://x.com/safe__ti",
     linkedin: "https://linkedin.com/in/eemarabs",
     quote: "Leadership is about creating change and inspiring others.",
-    tags: ["organizer"],
+    tags: ["organizer", "devs"],
   },
  
   {
@@ -53,7 +53,7 @@ export const team = [
     twitter: "https://x.com/deeje_?s=21",
     linkedin: "https://www.linkedin.com/in/khadija-sulaiman-jebu-68b78b250?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
     quote: "Building connections that foster growth and innovation.",
-    tags: ["content"],
+    tags: ["content","organizer" ],
   },
   {
     name: "Bilikisu Abdulgafar",
@@ -62,7 +62,7 @@ export const team = [
     twitter: "https://x.com/balqeesuh?s=21",
     linkedin: "https://www.linkedin.com/in/balqees-abdulgafar-9b6a7918a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
     quote: "Empowering people is the foundation of successful teams.",
-    tags: ["product"],
+    tags: ["product","organizer"],
   },
   {
     name: "Barakat Opeyemi Abdulhakeem",
@@ -71,7 +71,7 @@ export const team = [
     twitter: "https://x.com/EwaTechie?t=MwYttcxL4juY61txelSYNA&s=09",
     linkedin: "https://www.linkedin.com/in/opeyemi-abdulhakeem-a14aa8240?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     quote: "Designing user-centric experiences with purpose and creativity.",
-    tags: ["designers"],
+    tags: ["designers","organizer"],
   },
   {
     name: "Margret Edeh",
@@ -80,7 +80,7 @@ export const team = [
     twitter: "https://x.com/EdehMargret",
     linkedin: "https://www.linkedin.com/in/margret-edeh-65505b200/",
     quote: "Turning concepts into dynamic, responsive interfaces.",
-    tags: ["devs"],
+    tags: ["devs", "organizer"],
   },
   {
     name: "Habiba Gambo Dantata",
@@ -89,7 +89,7 @@ export const team = [
     twitter: "",
     linkedin: "",
     quote: "Driving innovation through entrepreneurship and collaboration.",
-    tags: ["content"],
+    tags: ["content","organizer"],
   },
   {
     name: "Rabia Aminu Ahmed",
@@ -98,11 +98,11 @@ export const team = [
     twitter: "https://x.com/rabia_ameenu",
     linkedin: "https://www.linkedin.com/in/rabia-aminu-ahmad-68b02525b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     quote: "Designing visuals that communicate and inspire.",
-    tags: ["content"],
+    tags: ["content","organizer"],
   },
   {
     name: "Ummuhani Musa",
-    role: "Speaker and Agenda Team",
+    role: "Project Manager",
     image: "", // Placeholder since no image is provided
     twitter: "https://x.com/ummulaymanoiza?s=21",
     linkedin: "https://www.linkedin.com/in/ummuhani-musa-b245a61b9?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",

@@ -213,12 +213,15 @@ function Home() {
 
         {/* Scroll Indicator */}
         <motion.div
-          
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
           className="absolute  bottom-10 left-1/2 transform -translate-x-1/2 text-blue-500"
         >
-          <ChevronDown onClick={scrollToSection} className="cursor-pointer" size={32} />
+          <ChevronDown
+            onClick={scrollToSection}
+            className="cursor-pointer"
+            size={32}
+          />
         </motion.div>
       </section>
 
@@ -270,11 +273,21 @@ function Home() {
         </div>
       </motion.section>
       <div id="sect" ref={sectionRef}>
-        <FeaturedSpeakers />
-        <PastHighlights />
-        <SchedulePreview/>
-        <Sponsors />
-        <FollowUsSection/>
+        <section id="speakers">
+          <FeaturedSpeakers />
+        </section>
+        <section id="past-highlights">
+          <PastHighlights />
+        </section>
+        <section id="schedule">
+          <SchedulePreview />
+        </section>
+        <section id="sponsors">
+          <Sponsors />
+        </section>
+        <section id="follow-us">
+          <FollowUsSection />
+        </section>
       </div>
     </div>
   );

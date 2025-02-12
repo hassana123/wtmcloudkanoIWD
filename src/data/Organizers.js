@@ -9,7 +9,7 @@ import margret from "../assets/team/margret.jpeg";
 import salima from "../assets/team/salima.jpg";
 import aisha from "../assets/team/aisha.jpeg";
 import rabia from "../assets/team/rabia.jpeg";
-import azeemah from "../assets/team/.jpg";
+import azeemah from "../assets/team/azeemah.jpg";
 
 export const team = [
   {

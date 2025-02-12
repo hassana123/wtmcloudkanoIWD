@@ -230,7 +230,7 @@ function Home() {
           className="absolute  bottom-10 left-1/2 transform -translate-x-1/2 text-blue-500"
         >
           <ChevronDown
-            onClick={scrollToSection}
+            onClick={() => scrollToSection("section")}
             className="cursor-pointer"
             size={32}
           />
@@ -284,7 +284,7 @@ function Home() {
           </motion.div>
         </div>
       </motion.section>
-      <div id="sect" ref={sectionRef}>
+      <div id="section" ref={sectionRef}>
         <section id="speakers">
           <FeaturedSpeakers />
         </section>

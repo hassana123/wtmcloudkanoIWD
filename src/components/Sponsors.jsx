@@ -50,6 +50,7 @@ function Sponsors() {
               className="flex items-center justify-center bg-white/70 backdrop-blur-lg rounded-xl p-4 shadow-md border border-dark/20 hover:shadow-lg hover:border-primary-dark transition-all"
             >
               <img
+              loading="lazy"
                 src={sponsor.logo}
                 alt={sponsor.name}
                 className="w-[120px] md:w-[150px] object-contain"

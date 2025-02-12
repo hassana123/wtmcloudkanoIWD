@@ -46,6 +46,7 @@ function PastHighlights() {
                 whileInView={{ opacity: 1 }}
               >
                 <img
+                loading="lazy"
                   src={highlight.url}
                   alt={highlight.caption}
                   className="w-full h-[600px] object-cover rounded-xl"

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
-import vibes from "../assets/16.jpeg";
+import follow from "../assets/follow.jpeg";
 
 const FollowUsSection = () => {
   return (
@@ -30,7 +30,8 @@ const FollowUsSection = () => {
         {/* Right Side */}
         <div>
           <img
-            src="https://img.freepik.com/premium-vector/follow-us-like-illustration-social-media-users-following-interesting-page_2175-15262.jpg"
+          loading="lazy"
+            src={follow}
             alt="WTM and G3Women"
             className="rounded-xl md:mx-0 mx-auto lg:w-[80vh] md:ml-auto h-[55vh] md:w-[80%] w-[90%]  shadow-xl"
           />

@@ -100,6 +100,7 @@ const VolunteerApplication = () => {
             </li>
           </ul>
           <motion.img
+          loading="lazy"
             src="https://assets.umso.co/1/women_day_2m89.svg" // Replace with your illustration URL
             alt="Illustration"
             className="w-48 h-auto ml-auto mb-6"

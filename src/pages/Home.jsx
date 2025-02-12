@@ -43,7 +43,10 @@ function Home() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
   const sectionRef = useRef(null); // Reference for the section
-
+  useEffect(() => {
+    const preloadImage = new Image();
+    preloadImage.src = hero; // Preload the hero image
+  }, []);
   useEffect(() => {
     // Scroll to section based on the hash in the URL
     const hash = location.hash;
@@ -183,11 +186,11 @@ function Home() {
               {/* First Set of Items */}
               <div className="flex items-center justify-center px-8 space-x-12">
                 <div className="flex items-center justify-center font-semibold text-sm text-white">
-                  <img src={wtm} alt="Women Techmakers" className="h-8 mr-2" />
+                  <img loading="lazy" src={wtm} alt="Women Techmakers" className="h-8 mr-2" />
                   Women Techmakers
                 </div>
                 <div className="flex items-center justify-center font-semibold text-sm text-white">
-                  <img src={g3w} alt="G3women" className="h-8 mr-2" />
+                  <img loading="lazy" src={g3w} alt="G3women" className="h-8 mr-2" />
                   G3women
                 </div>
                 <div className="flex items-center justify-center font-semibold text-sm text-white">
@@ -203,15 +206,16 @@ function Home() {
               {/* Second Set of Items (Duplicate for Infinite Loop) */}
               <div className="flex items-center justify-center px-8 space-x-12">
                 <div className="flex items-center justify-center font-semibold text-sm text-white">
-                  <img src={wtm} alt="Women Techmakers" className="h-8 mr-2" />
+                  <img loading="lazy" src={wtm} alt="Women Techmakers" className="h-8 mr-2" />
                   Women Techmakers
                 </div>
                 <div className="flex items-center justify-center font-semibold text-sm text-white">
-                  <img src={g3w} alt="G3women" className="h-8 mr-2" />
+                  <img loading="lazy" src={g3w} alt="G3women" className="h-8 mr-2" />
                   G3women
                 </div>
                 <div className="flex items-center justify-center font-semibold text-sm text-white">
                   <img
+                  loading="lazy"
                     src={google}
                     alt="Grow with Google"
                     className="h-8 mr-2"

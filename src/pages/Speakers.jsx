@@ -32,6 +32,7 @@ function Speakers() {
                   <div className="bg-white rounded-xl shadow-lg overflow-hidden h-full">
                     <div className="aspect-w-16 aspect-h-fit-content">
                       <img
+                      loading="lazy"
                         src={speaker.image}
                         alt={speaker.name}
                         className="w-full h-64 object-cover"

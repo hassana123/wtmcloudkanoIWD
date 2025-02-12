@@ -26,11 +26,13 @@ function Footer() {
           <div className="col-span-1 md:col-span-2">
             <div className="flex space-x-3">
               <img
+              loading="lazy"
                 src={logo}
                 alt="WTM Cloud Kano"
                 className="h-8 w-auto mb-4"
               />
               <img
+              loading="lazy"
                 src={g3w}
                 alt="Giggles Glow And Grow"
                 className="h-8 w-auto mb-4"

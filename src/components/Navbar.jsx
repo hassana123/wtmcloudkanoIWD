@@ -38,9 +38,9 @@ function Navbar() {
           {/* Logo Section */}
           <div className="flex items-center space-x-2">
             <Link to="/" className="flex items-center space-x-2">
-              <img className="h-10 w-auto" src={logo} alt="WTM Cloud Kano" />
+              <img className="h-10 w-auto" loading="lazy" src={logo} alt="WTM Cloud Kano" />
               <span className="text-2xl font-bold text-navy">×</span>
-              <img className="h-10 w-auto" src={g3w} alt="G3W" />
+              <img className="h-10 w-auto" loading="lazy" src={g3w} alt="G3W" />
             </Link>
           </div>
 

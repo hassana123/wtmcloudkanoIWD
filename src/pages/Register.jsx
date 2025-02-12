@@ -127,6 +127,7 @@ const Register = () => {
           </ul>
           <motion.img
             src={ilt}
+            loading="lazy"
             alt="Illustration"
             className="w-48 h-auto ml-auto mb-6 rounded-xl"
             initial={{ opacity: 0, y: 20 }}

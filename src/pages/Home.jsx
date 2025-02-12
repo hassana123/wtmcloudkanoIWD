@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 import CountUp from "react-countup";
 import Countdown from "../components/Countdown";
@@ -23,6 +23,7 @@ import google from "../assets/google.png";
 import SchedulePreview from "../components/ShedulePreview";
 function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation()
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
   const navigate = useNavigate();
   useEffect(() => {
@@ -43,8 +44,19 @@ function Home() {
   }, []);
   const sectionRef = useRef(null); // Reference for the section
 
-  const scrollToSection = () => {
-    sectionRef.current.scrollIntoView({ behavior: "smooth" });
+  useEffect(() => {
+    // Scroll to section based on the hash in the URL
+    const hash = location.hash;
+    if (hash) {
+      const element = document.querySelector(hash);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [location]); // Dependency on location to track hash changes
+
+  const scrollToSection = (section) => {
+    navigate(`#${section}`); // Change URL hash when a button or link is clicked
   };
   return (
     <div className="relative">

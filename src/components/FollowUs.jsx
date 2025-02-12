@@ -6,7 +6,7 @@ const FollowUsSection = () => {
   return (
     <section className="bg-gradient-to-bl from-primary to-navy text-white py-10">
       <div className="lg:container  lg:mx-auto mx-3 grid md:grid-cols-2 items-center justify-between space-y-8 md:space-y-0">
-        {/* Left Side */}
+       
         <div className='px-2 md:px-0'>
           <h2 className="text-3xl md:text-5xl font-bold mb-4">Follow Us</h2>
           <h3 className="text-xl md:text-2xl font-semibold mb-4">
@@ -16,7 +16,7 @@ const FollowUsSection = () => {
             Stay connected with our inspiring community. Follow us on social media to be part of our journey and join the conversations that matter.
           </p>
 
-          {/* Social Media Links - WTM */}
+          Social Media Links - WTM
           <div className="md:flex gap-4 mb-6 items-center">
          <div>
          <span className=" text-sm block mb-3 text-center  ">Women Techmakers:</span>
@@ -24,15 +24,15 @@ const FollowUsSection = () => {
 
            <div className='flex gap-4 justify-center'>
              {/* Facebook */}
-             {/* <a
+             <a
               href="https://facebook.com"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center w-12 h-12 rounded-full bg-white text-blue-600 hover:text-blue-800 hover:shadow-md transition"
             >
               <Facebook className="w-6 h-6" />
-            </a> */}
-            {/* Twitter */}
+            </a>
+            Twitter
             <a
               href="https://x.com/KanoWtm?t=7gjpu8Uc6obmTkVa9ukhFg&s=09"
               target="_blank"
@@ -65,21 +65,21 @@ const FollowUsSection = () => {
 
           {/* Social Media Links - G3Women */}
           
-          <div className="md:flex gap-4  mb-8 ">
+          {/* <div className="md:flex gap-4  mb-8 ">
          <div className='mb-3'>
              <span className=" text-sm block text-center">G3Women:</span>
          </div>
             <div className='flex gap-3 justify-center'>
-                {/* Facebook */}
-            {/* <a
+                {/* Facebook 
+            <a
               href="https://facebook.com"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center w-12 h-12 rounded-full bg-white text-blue-600 hover:text-blue-800 hover:shadow-md transition"
             >
               <Facebook className="w-6 h-6" />
-            </a> */}
-            {/* Twitter */}
+            </a>
+            Twitter
             <a
               href="https://x.com/g3womenofficial?s=21"
               target="_blank"
@@ -97,7 +97,7 @@ const FollowUsSection = () => {
             >
               <Instagram className="w-6 h-6" />
             </a>
-            {/* LinkedIn */}
+            {/* LinkedIn 
             <a
               href="https://www.linkedin.com/company/g3womenofficial"
               target="_blank"
@@ -107,7 +107,7 @@ const FollowUsSection = () => {
               <Linkedin className="w-6 h-6" />
             </a>
             </div>
-          </div>
+          </div> */}
 
           {/* Button - G3Women */}
           <button

@@ -22,7 +22,7 @@ export const scheduleItems = [
     title: "Lightning Talks",
     track: "leadership",
     description:
-      "- Leadership & Public Speaking for Women in Tech\n- Overcoming Bias & Building a Personal Brand in Tech",
+      "Leadership & Public Speaking for Women in Tech\n- Overcoming Bias & Building a Personal Brand in Tech",
   },
   {
     time: "12:00 PM",

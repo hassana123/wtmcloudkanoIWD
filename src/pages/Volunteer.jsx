@@ -70,7 +70,7 @@ const VolunteerApplication = () => {
   return (
     <div className="relative space-y-3 py-20 mx-auto lg:flex justify-between items-center bg-gradient-to-br from-primary-light via-white to-secondary-light">
       {/* Left Section - Volunteer Opportunities Content */}
-      <div className="w-full lg:w-[45%] h-full items-center justify-center text-center px-3 md:p-8">
+      {/* <div className="w-full lg:w-[45%] h-full items-center justify-center text-center px-3 md:p-8">
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -115,7 +115,7 @@ const VolunteerApplication = () => {
             Apply as a Volunteer
           </button>
         </motion.div>
-      </div>
+      </div> */}
 
       {/* Right Section - Volunteer Application Form */}
       {/* <div

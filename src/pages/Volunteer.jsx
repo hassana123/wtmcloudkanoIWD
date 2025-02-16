@@ -118,7 +118,7 @@ const VolunteerApplication = () => {
       </div>
 
       {/* Right Section - Volunteer Application Form */}
-      <div
+      {/* <div
         ref={formRef}
         className="mt-6 w-[95%] md:w-[60%] mx-auto lg:w-[45%]"
       >
@@ -243,6 +243,38 @@ const VolunteerApplication = () => {
               </button>
             </motion.form>
           )}
+        </div>
+      </div> */}
+        {/* Right Section - Application Closed Animation */}
+        <div className="mt-6 w-[95%] md:w-[60%] mx-auto lg:w-[45%]">
+        <h3 className="text-center text-2xl bg-forest-dark text-white px-5 py-3 rounded-t-xl">
+          Volunteer Application
+        </h3>
+        <div className="bg-white mx-auto p-5 rounded-b-xl shadow-xl">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            className="text-center"
+          >
+            <motion.img
+              src="https://img.freepik.com/free-vector/woman-hanging-closed-signboard-due-coronavirus_23-2148880116.jpg" // Replace with a "closed" illustration URL
+              alt="Application Closed"
+              loading="lazy"
+              className="w-48 h-auto mx-auto mb-6"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1 }}
+            />
+            <p className="text-xl text-gray-700 mt-4">
+              Applications for volunteering are currently closed. Stay tuned for upcoming opportunities!
+            </p>
+            <button
+              className="mt-6 px-4 py-2 bg-forest-dark font-medium text-white rounded-lg hover:bg-forest transition"
+              onClick={() => navigate("/")}
+            >
+              Back to Home
+            </button>
+          </motion.div>
         </div>
       </div>
     </div>

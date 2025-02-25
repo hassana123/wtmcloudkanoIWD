@@ -2,7 +2,8 @@ import { motion } from "framer-motion";
 import g3w from "../assets/g3w.png";
 import wtm from "../assets/wtm.png";
 import google from "../assets/google.png";
-
+import baba from "../assets/baba.png";
+import { div } from "framer-motion/client";
 function Sponsors() {
   const sponsors = [
     {
@@ -18,6 +19,11 @@ function Sponsors() {
     {
       name: "Giggles Glow and Grow Women",
       logo: g3w,
+      tier: "silver",
+    },
+    {
+      name: "Baba Ahmed University",
+      logo: baba,
       tier: "silver",
     },
   ];
@@ -41,21 +47,28 @@ function Sponsors() {
         {/* Sponsor Logos */}
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-12 justify-center items-center">
           {sponsors.map((sponsor, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1, duration: 0.5 }}
-              whileHover={{ scale: 1.08 }}
-              className="flex items-center justify-center bg-white/70 backdrop-blur-lg rounded-xl p-4 shadow-md border border-dark/20 hover:shadow-lg hover:border-primary-dark transition-all"
-            >
-              <img
-              loading="lazy"
-                src={sponsor.logo}
-                alt={sponsor.name}
-                className="w-[120px] md:w-[150px] object-contain"
-              />
-            </motion.div>
+            <div>
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1, duration: 0.5 }}
+                whileHover={{ scale: 1.08 }}
+                className="flex items-center justify-center bg-white/70 backdrop-blur-lg rounded-xl p-4 shadow-md border border-dark/20 hover:shadow-lg hover:border-primary-dark transition-all"
+              >
+                <div>
+                  <img
+                    loading="lazy"
+                    src={sponsor.logo}
+                    alt={sponsor.name}
+                    className="w-[150px] md:w-[200px] object-cover"
+                  />
+                  <span className="text-center block text-dark text-sm my-2">
+                    {sponsor.name}
+                  </span>
+                </div>{" "}
+              </motion.div>
+            </div>
           ))}
         </div>
 

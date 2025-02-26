@@ -136,7 +136,7 @@ function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact</h3>
             <p className="text-gray-300 mb-2">Email: g3women@gmail.com</p>
-            <p className="text-gray-300">Location: Kano, Nigeria</p>
+            <p className="text-gray-300">Location: Baba Ahmed University, Phase 1, No 306, sharada, kano 700234, Kano Nigeria</p>
           </div>
         </div>
 

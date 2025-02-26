@@ -20,7 +20,7 @@ function FAQ() {
     },
     {
       question: "When and where will the event take place?",
-      answer: "The event will be physical, on the 8th of March 2025. The location will be shared soon.",
+      answer: "The event will be physical, on the 8th of March 2025 At Baba Ahmed University, Phase 1, No 306, sharada, kano 700234, Kano",
     },
     {
       question: "Who can attend this event?",

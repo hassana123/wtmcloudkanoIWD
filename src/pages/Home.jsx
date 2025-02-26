@@ -146,7 +146,7 @@ function Home() {
                     className="flex items-center gap-3"
                   >
                     <MapPin className="w-6 h-6 text-accent-gold" />
-                    <span className="text-dark">TBD</span>
+                    <span className="text-dark">Baba Ahmed University Kano</span>
                   </motion.div>
                   <motion.div
                     whileHover={{ scale: 1.02 }}

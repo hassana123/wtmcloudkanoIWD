@@ -3,6 +3,7 @@ import amina2 from "../assets/speakers/amina2.jpg";
 import saa from "../assets/speakers/sa'ada.jpg";
 import mercy from "../assets/speakers/mercy.jpg";
 import aminaL from "../assets/team/amina.jpeg"
+import suliyat from "../assets/speakers/suliyat.jpg"
 export const speakers = [
   {
       id: 1,
@@ -71,12 +72,27 @@ export const speakers = [
       company: "Schoola & Amiron Ventures",
       image: amina,
       bio: "Amina Rabiu is a Product Designer passionate about creating seamless digital experiences. She has experience in web development and has volunteered with healthcare NGOs and mentored aspiring designers.",
-      topic: "Panel: Thriving in Tech as a Woman – Beyond the Resume",
+      topic: "The Role of Design Thinking in Career Growth",
       day: "IWD 2025 Kano",
       social: {
           twitter: "#",
           linkedin: "#",
           github: "#",
       }
-  }
+  },
+  {
+    id: 6,
+    name: "Suliyat Idris",
+    role: "Instructional Design Strategist",
+    company: "Edunovative Concept & Smartclicks Tech-Wellness",
+    image: suliyat,
+    bio: "Suliyat Idris is an Instructional Design Strategist dedicated to creating impactful learning experiences. She advocates for digital empowerment, participatory learning, and using tech for social good.",
+    topic: "Tech for Social Good: How Girls Can Change the World with Technology",
+    day: "IWD 2025 Kano",
+    social: {
+        twitter: "#",
+        linkedin: "#",
+        github: "#",
+    }
+  },
 ];

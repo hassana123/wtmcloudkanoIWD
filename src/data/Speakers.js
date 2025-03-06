@@ -18,9 +18,9 @@ export const speakers = [
       topic: "Breaking Barriers in Tech – No Permission Needed",
       day: "IWD 2025 Kano",
       social: {
-          twitter: "#",
-          linkedin: "#",
-          github: "#",
+          twitter: "https://x.com/amiynarh",
+          linkedin: "https://www.linkedin.com/in/aminalawalofficial/",
+          email:"amynalawal@gmail.com"
       }
   },
   {
@@ -33,9 +33,9 @@ export const speakers = [
       topic: "Future of Women in Tech – The Next 10 Years",
       day: "IWD 2025 Kano",
       social: {
-          twitter: "#",
-          linkedin: "#",
-          github: "#",
+          twitter: "https://x.com/IAmSoosy",
+          linkedin: "https://www.linkedin.com/in/saadat-aliyu-9b4446157/",
+          email:"soosyamoora@gmail.com"
       }
   },
   {

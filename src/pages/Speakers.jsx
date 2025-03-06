@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
-import { FaTwitter, FaLinkedin, FaGithub } from 'react-icons/fa';
+import { FaTwitter, FaLinkedin, FaGithub, FaInstagram } from 'react-icons/fa';
 import {speakers} from "../data/Speakers"
 function Speakers() {
   
@@ -68,7 +68,7 @@ function Speakers() {
                           <FaLinkedin className="w-6 h-6 text-primary-dark hover:text-primary" />
                         </a>
                         <a href={speaker.social.github} target="_blank" rel="noopener noreferrer">
-                          <FaGithub className="w-6 h-6 text-dark hover:text-dark/50" />
+                          <FaInstagram className="w-6 h-6 text-dark hover:text-dark/50" />
                         </a>
                       </div>
                       <button

@@ -73,7 +73,8 @@ function Schedule() {
                 </div>
                 <div className="md:w-1/2 mb-4 md:mb-0">
                   <h3 className="text-xl font-semibold text-navy">{item.title}</h3>
-                  <p className="text-gray-600 mt-2">{item.description}</p>
+                  <p className="text-gray-600 mt-2" dangerouslySetInnerHTML={{ __html: item.description }}></p>
+
                 </div>
                 <div className="md:w-1/4 text-right">
                   <span className="inline-block px-3 py-1 rounded-full text-sm font-medium bg-secondary-light text-secondary-dark">

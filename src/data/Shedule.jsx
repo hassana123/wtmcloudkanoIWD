@@ -93,6 +93,11 @@ export const scheduleItems = [
     time: "2:30 PM",
     title: "Breakout Sessions",
     track: "technical",
-    description: "Attendees choose a session based on interest.\nBreakout 1: Guide to Serverless Computing with Google Cloud Platform - Rasheedat Atinuke Jamiu (DevOps Engineer).\nBreakout 2: Frontend Power-Up - Speed, Storage & Beyond - Hassana Abdullahi (Frontend Developer, Women Techmakers Lead).\nBreakout 3: Health Tech & Data - Building Solutions for the Future - eHealth Africa Workshop.",
+    description: `Attendees choose a session based on interest.
+    <ul class="list-disc pl-5 my-5 space-y-2 text-gray-700">
+      <li><b>Breakout 1:</b> Guide to Serverless Computing with Google Cloud Platform - Rasheedat Atinuke Jamiu (DevOps Engineer).</li>
+      <li><b>Breakout 2:</b> Frontend Power-Up - Speed, Storage & Beyond - Hassana Abdullahi (Frontend Developer, Women Techmakers Lead).</li>
+      <li><b>Breakout 3:</b> Health Tech & Data - Building Solutions for the Future - eHealth Africa Workshop.</li>
+    </ul>`
   },
 ];

@@ -15,7 +15,8 @@ function Schedule() {
     { id: 'leadership', name: 'Leadership & Innovation' },
     { id: 'technical', name: 'Technical Skills & AI' },
     { id: 'career', name: 'Career Development' },
-    { id: 'entrepreneurship', name: 'Entrepreneurship' },
+    { id: 'engagement', name: 'Engagement' },
+    { id: 'panel', name: 'Panel Sessions' },
   ];
 
   

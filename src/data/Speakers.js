@@ -48,9 +48,8 @@ export const speakers = [
       topic: "Overcoming Bias & Building a Personal Brand in Tech",
       day: "IWD 2025 Kano",
       social: {
-          twitter: "#",
-          linkedin: "#",
-          github: "#",
+          linkedin: "https://www.linkedin.com/in/aminars",
+          email: "amina.rabiu22@gmail.com",
       }
   },
   {
@@ -63,9 +62,9 @@ export const speakers = [
       topic: "Soft Skills for Career Growth",
       day: "IWD 2025 Kano",
       social: {
-          twitter: "#",
-          linkedin: "#",
-          github: "#",
+          twitter: "https://x.com/MercyMarkus",
+          github: "https://github.com/MercyMarkus",
+          linkedin: "https://www.linkedin.com/in/mercymarkus/",
       }
   },
   {
@@ -80,7 +79,6 @@ export const speakers = [
       social: {
           twitter: "#",
           linkedin: "#",
-          github: "#",
       }
   },
   {
@@ -93,9 +91,8 @@ export const speakers = [
     topic: "Tech for Social Good: How Girls Can Change the World with Technology",
     day: "IWD 2025 Kano",
     social: {
-        twitter: "#",
-        linkedin: "#",
-        github: "#",
+        twitter: "https://x.com/Ennygirl4succes",
+        linkedin: "https://www.linkedin.com/in/suliyataaidris?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BwDlExGeGRRuhUHYJyCZIDg%3D%3D",
     }
   },
   {
@@ -108,8 +105,8 @@ export const speakers = [
     topic: "Leadership & Public Speaking for Women",
     day: "IWD 2025 Kano",
     social: {
-        linkedin: "Zenab Adam",
-        instagram: "@zenaba.adam",
+        linkedin: "https://www.linkedin.com/in/zenab-adam-03809795/",
+        instagram: "https://www.instagram.com/zenaba.adam/",
         email: "adamszenab@gmail.com"
     }
   },
@@ -124,7 +121,7 @@ export const speakers = [
     day: "IWD 2025 Kano",
     social: {
         linkedin: "https://www.linkedin.com/in/rasheedat-atinuke-jamiu/",
-        instagram: "@Rassh_RAJ"
+        instagram: "https://www.instagram.com/rassh_raj/?locale=zh_tw&hl=ar"
     }
   },
   {
@@ -137,8 +134,9 @@ export const speakers = [
     topic: "Frontend Power-Up: Speed, Storage & Beyond!",
     day: "IWD 2025 Kano",
     social: {
-        linkedin: "Hassana Abdullahi",
-        twitter: "techSultana"
+        linkedin: "https://www.linkedin.com/in/hassana-abdullahi-858040240/",
+        twitter: "https://twitter.com/techSultana",
+        email: "hassanaabdll1@gmail.com",
     }
   }
 ];

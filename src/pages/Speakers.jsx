@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
-import { FaTwitter, FaLinkedin, FaGithub, FaInstagram } from 'react-icons/fa';
+import { FaTwitter, FaLinkedin, FaMailchimp, FaMailBulk, FaInstagram } from 'react-icons/fa';
 import {speakers} from "../data/Speakers"
 function Speakers() {
   
@@ -61,16 +61,27 @@ function Speakers() {
                     <div className="absolute bottom-6 left-6 right-6">
                       <p className="font-medium text-primary-dark mb-4">Topic: {speaker.topic}</p>
                       <div className="flex space-x-4">
-                        <a href={speaker.social.twitter} target="_blank" rel="noopener noreferrer">
-                          <FaTwitter className="w-6 h-6 text-navy hover:text-dark" />
-                        </a>
-                        <a href={speaker.social.linkedin} target="_blank" rel="noopener noreferrer">
-                          <FaLinkedin className="w-6 h-6 text-primary-dark hover:text-primary" />
-                        </a>
-                        <a href={speaker.social.github} target="_blank" rel="noopener noreferrer">
-                          <FaInstagram className="w-6 h-6 text-dark hover:text-dark/50" />
-                        </a>
-                      </div>
+  {speaker.social.linkedin && (
+    <a href={speaker.social.linkedin} target="_blank" rel="noopener noreferrer">
+      <FaLinkedin className="text-blue-700 text-2xl hover:text-blue-900 transition" />
+    </a>
+  )}
+  {speaker.social.twitter && (
+    <a href={speaker.social.twitter} target="_blank" rel="noopener noreferrer">
+      <FaTwitter className="text-blue-500 text-2xl hover:text-blue-700 transition" />
+    </a>
+  )}
+  {speaker.social.instagram && (
+    <a href={speaker.social.instagram} target="_blank" rel="noopener noreferrer">
+      <FaInstagram className="text-pink-600 text-2xl hover:text-pink-800 transition" />
+    </a>
+  )}
+  {speaker.social.email && (
+    <a href={`mailto:${speaker.social.email}`} target="_blank" rel="noopener noreferrer">
+      <FaMailBulk className="text-gray-700 text-2xl hover:text-gray-900 transition" />
+    </a>
+  )}
+</div>
                       <button
                         onClick={() => setFlippedCard(null)}
                         className="mt-4 px-6 py-2 bg-primary-dark text-white rounded-full hover:bg-primary transition-colors"

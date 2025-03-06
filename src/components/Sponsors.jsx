@@ -3,30 +3,23 @@ import g3w from "../assets/g3w.png";
 import wtm from "../assets/wtm.png";
 import google from "../assets/google.png";
 import baba from "../assets/baba.png";
-import { div } from "framer-motion/client";
+// import { div } from "framer-motion/client";
+import shamrock from "../assets/partner1.jpg";
+import hostspace from "../assets/partner.png";
+import ridot from "../assets/ridot.png";
+import thezango from "../assets/zango.png";
 function Sponsors() {
   const sponsors = [
-    {
-      name: "Google",
-      logo: google,
-      tier: "platinum",
-    },
-    {
-      name: "Women TechMakers Cloud Kano",
-      logo: wtm,
-      tier: "gold",
-    },
-    {
-      name: "Giggles Glow and Grow Women",
-      logo: g3w,
-      tier: "silver",
-    },
-    {
-      name: "Baba Ahmed University",
-      logo: baba,
-      tier: "silver",
-    },
+    { name: "Google", logo: google, tier: "platinum" },
+    { name: "Women TechMakers Cloud Kano", logo: wtm, tier: "gold" },
+    { name: "Giggles Glow and Grow Women", logo: g3w, tier: "silver" },
+    { name: "Baba Ahmed University", logo: baba, tier: "silver" },
+    { name: "The Zango", logo: thezango, tier: "media partner" },
+    { name: "Shamrock Innovations", logo: shamrock, tier: "partner" },
+    { name: "HostSpace Cloud Solutions", logo: hostspace, tier: "sponsor" },
+    { name: "Ridot Software Academy", logo: ridot, tier: "partner" },
   ];
+
 
   return (
     <section className="py-10 bg-gradient-to-br from-primary-light via-white to-secondary-light">

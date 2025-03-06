@@ -40,7 +40,7 @@ function Speakers() {
                     </div>
                     <div className="p-6">
                       <h3 className="text-lg font-semibold text-navy mb-2">{speaker.name}</h3>
-                      <p className="text-primary-dark mb-2 font-medium">{speaker.role}</p>
+                      <p className="text-primary-dark mb-2 font-medium text-sm">{speaker.role}</p>
                       <p className="text-dark mb-2 text-sm">{speaker.topic}</p>
                     
                       <button

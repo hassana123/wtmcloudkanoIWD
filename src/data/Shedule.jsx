@@ -74,7 +74,7 @@ export const scheduleItems = [
   {
     time: "2:00 PM",
     title: "Tech for Social Good - How Girls Can Change the World with Technology",
-    track: "impact",
+    track: "general",
     description: "Suliyat Idris (Instructional Design Strategist) - Tech for advocacy, education, and social impact.",
   },
   {

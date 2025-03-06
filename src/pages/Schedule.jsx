@@ -17,6 +17,7 @@ function Schedule() {
     { id: 'career', name: 'Career Development' },
     { id: 'engagement', name: 'Engagement' },
     { id: 'panel', name: 'Panel Sessions' },
+    { id: 'impact', name: 'Social Impact' },
   ];
 
   

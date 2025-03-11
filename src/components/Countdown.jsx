@@ -6,18 +6,17 @@ function Countdown({ targetDate }) {
 
   function calculateTimeLeft() {
     const difference = +new Date(targetDate) - +new Date();
-    let timeLeft = {};
 
-    if (difference > 0) {
-      timeLeft = {
-        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-        hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-        minutes: Math.floor((difference / 1000 / 60) % 60),
-        seconds: Math.floor((difference / 1000) % 60),
-      };
+    if (difference <= 0) {
+      return { days: 0, hours: 0, minutes: 0, seconds: 0 };
     }
 
-    return timeLeft;
+    return {
+      days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+      hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+      minutes: Math.floor((difference / 1000 / 60) % 60),
+      seconds: Math.floor((difference / 1000) % 60),
+    };
   }
 
   useEffect(() => {
@@ -26,7 +25,7 @@ function Countdown({ targetDate }) {
     }, 1000);
 
     return () => clearInterval(timer);
-  }, []);
+  }, [targetDate]);
 
   const timeBlocks = [
     { label: 'Days', value: timeLeft.days },

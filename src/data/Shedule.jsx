@@ -31,27 +31,27 @@ export const scheduleItems = [
   },
    {
     time: "11:40 AM",
-    title: "Keynote 2 - Health Tech & Innovation",
-    track: "Health",
+    title: "Guide to Serverless Computing",
+    track: "technical",
     description: "Guide to Serverless Computing with Google Cloud Platform - Rasheedat Atinuke Jamiu (DevOps Engineer).",
   },
-  // {
-  //   time: "11:30 AM",
-  //   title: "Keynote 2 - Health Tech & Innovation",
-  //   track: "technical",
-  //   description: "eHealth Africa Representative - How technology is transforming healthcare and why more women should be in health tech.",
-  // },
   {
     time: "11:45 AM",
     title: "Overcoming Bias & Building a Personal Brand in Tech",
     track: "career",
     description: "Amina R. Suleiman (National Space Center, Freelance Graphic Designer) - How women can build credibility, stand out, and own their career narratives.",
   },
-  {
-    time: "12:05 PM",
-    title: "Icebreaker 2 - Would You Rather? Tech Edition",
-    track: "engagement",
-    description: "Fun ‘Would You Rather’ game related to tech and career choices.",
+  // {
+  //   time: "12:05 PM",
+  //   title: "Icebreaker 2 - Would You Rather? Tech Edition",
+  //   track: "engagement",
+  //   description: "Fun ‘Would You Rather’ game related to tech and career choices.",
+  // },
+    {
+    time: "12:05 AM",
+    title: "Keynote 2 - Health Tech & Innovation",
+    track: "technical",
+    description: "eHealth Africa Representative - How technology is transforming healthcare and why more women should be in health tech.",
   },
   {
     time: "12:20 PM",

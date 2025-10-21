@@ -31,7 +31,7 @@ export const scheduleItems = [
   },
    {
     time: "11:40 AM",
-    title: "Guide to Serverless Computing",
+    title: "Technical Keynote - Guide to Serverless Computing",
     track: "technical",
     description: "Guide to Serverless Computing with Google Cloud Platform - Rasheedat Atinuke Jamiu (DevOps Engineer).",
   },

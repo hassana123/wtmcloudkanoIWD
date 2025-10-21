@@ -30,7 +30,7 @@ export const scheduleItems = [
     description: "Sa’adat Aliyu (Founder, Shamrock Innovations) - Emerging trends, AI, automation, and what women should prepare for in tech.",
   },
    {
-    time: "10:40 AM",
+    time: "11:40 AM",
     title: "Keynote 2 - Health Tech & Innovation",
     track: "Health",
     description: "Guide to Serverless Computing with Google Cloud Platform - Rasheedat Atinuke Jamiu (DevOps Engineer).",

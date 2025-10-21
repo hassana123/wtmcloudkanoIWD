@@ -29,12 +29,18 @@ export const scheduleItems = [
     track: "leadership",
     description: "Sa’adat Aliyu (Founder, Shamrock Innovations) - Emerging trends, AI, automation, and what women should prepare for in tech.",
   },
-  {
-    time: "11:30 AM",
+   {
+    time: "10:40 AM",
     title: "Keynote 2 - Health Tech & Innovation",
-    track: "technical",
-    description: "eHealth Africa Representative - How technology is transforming healthcare and why more women should be in health tech.",
+    track: "Health",
+    description: "Guide to Serverless Computing with Google Cloud Platform - Rasheedat Atinuke Jamiu (DevOps Engineer).",
   },
+  // {
+  //   time: "11:30 AM",
+  //   title: "Keynote 2 - Health Tech & Innovation",
+  //   track: "technical",
+  //   description: "eHealth Africa Representative - How technology is transforming healthcare and why more women should be in health tech.",
+  // },
   {
     time: "11:45 AM",
     title: "Overcoming Bias & Building a Personal Brand in Tech",
@@ -95,7 +101,6 @@ export const scheduleItems = [
     track: "technical",
     description: `Attendees choose a session based on interest.
     <ul class="list-disc pl-5 my-5 space-y-2 text-gray-700">
-      <li><b>Breakout 1:</b> Guide to Serverless Computing with Google Cloud Platform - Rasheedat Atinuke Jamiu (DevOps Engineer).</li>
       <li><b>Breakout 2:</b> Frontend Power-Up - Speed, Storage & Beyond - Hassana Abdullahi (Frontend Developer, Women Techmakers Lead).</li>
       <li><b>Breakout 3:</b> Health Tech & Data - Building Solutions for the Future - eHealth Africa Workshop.</li>
     </ul>`
